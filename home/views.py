@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-# from .forms import ImageForm (giving an error for some reason)
+from .forms import ImageForm
 # Create your views here.
 
 
