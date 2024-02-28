@@ -1,0 +1,11 @@
+{% extends "home.html" %}
+<!-- Used tutorial https://www.youtube.com/watch?v=Ev5xgwndmfc&ab_channel=TechWithTim, minus bootstrapping part -->
+{% block title %}Create an Account{% endblock %}
+
+{% block content %}
+    <form method="POST" class="form-group">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-success">Register</button>
+    </form>
+{% endblock %}
