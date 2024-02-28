@@ -5,7 +5,12 @@
     <title> Upload Images </title>
 </head>
 <body>
-    <h1> Upload Images </h1>
-
+    <h1> Upload Images </h1> <!-- upload image form -->
+        <form action="{% url 'image_upload' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %} <!-- form syntax -->
+        {{ form.as_p }}
+        <br>
+        <button type="submit"> Upload </button> <!-- submit button -->
+    </form>
 </body>
 </html>
