@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+{%  load static %}
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -38,5 +41,47 @@
     <div class="container">{% block content %} {% endblock %}</div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" ></script>
+      <h3 style="margin-left: 25px; font-size: 40px; text-align: center"> Categories </h3>
+    <!-- Scroll line for categories -->
+    <div style="margin-left: 20px; display: flex; white-space: nowrap; overflow-x: auto; -ms-overflow-style: none;">
+        <div style="margin-right: 20px">
+            <a href="#"> <!-- links to the page of art -->
+                <img src="{% static 'placeHolderImage.png' %}" alt="img" style="width: 300px; height: auto">
+            </a>
+            <a href="#"> <!-- links to the page of art -->
+                <img src="{% static 'placeHolderImage.png' %}" alt="img" style="width: 300px; height: auto">
+            </a>
+            <a href="#"> <!-- links to the page of art -->
+                <img src="{% static 'placeHolderImage.png' %}" alt="img" style="width: 300px; height: auto">
+            </a>
+            <a href="#"> <!-- links to the page of art -->
+                <img src="{% static 'placeHolderImage.png' %}" alt="img" style="width: 300px; height: auto">
+            </a>
+            <a href="#"> <!-- links to the page of art -->
+                <img src="{% static 'placeHolderImage.png' %}" alt="img" style="width: 300px; height: auto">
+            </a>
+            <a href="#"> <!-- links to the page of art -->
+                <img src="{% static 'placeHolderImage.png' %}" alt="img" style="width: 300px; height: auto">
+            </a>
+        </div>
+    </div>
+    <!-- little about us section -->
+    <div style="text-align: center; width: 50%; margin-top: 30px; margin-left: auto; margin-right: auto">
+        <h4 style="font-size: 30px"> About Us </h4>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Sed enim ut sem viverra aliquet eget sit. Odio
+            euismod lacinia at quis risus sed vulputate odio ut. Faucibus scelerisque eleifend
+            donec pretium vulputate sapien nec sagittis. Venenatis cras sed felis eget velit aliquet.
+            Lectus sit amet est placerat. Rhoncus mattis rhoncus urna neque. In metus vulputate eu
+            scelerisque felis imperdiet. Quisque egestas diam in arcu. Ac auctor augue mauris augue neque
+        </p>
+
+        <a href="#">
+            <button> About Us </button>
+        </a>
+    </div>
+
   </body>
 </html>
+
+
