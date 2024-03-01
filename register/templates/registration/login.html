@@ -1,0 +1,14 @@
+{% extends "home.html" %}
+
+{% block title %}
+Login here
+{% endblock %}
+
+{% block content %}
+    <form method="POST" class="form-group">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-success">Log In</button>
+    <p>Don't have an account yet? Click <a href="/register">here</a> to create one.</p>
+    </form>
+{% endblock %}
