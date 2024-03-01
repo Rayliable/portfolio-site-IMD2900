@@ -38,7 +38,15 @@
         </ul>
       </div>
     </nav>
-    <div class="container">{% block content %} {% endblock %}</div>
+    <div class="container">
+        {% block content %}
+           {% if user.is_authenticated %}
+              Signed in!
+           {% else %}
+               <p><a href="/login">Please log in here.</a></p>
+           {% endif %}
+        {% endblock %}
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" ></script>
       <h3 style="margin-left: 25px; font-size: 40px; text-align: center"> Categories </h3>
