@@ -9,6 +9,14 @@ def home(request):  # home page of site
     return render(request, "home.html")
 
 
+def about(request):  # home page of site
+    return render(request, "about.html")
+
+
+def contact(request):  # home page of site
+    return render(request, "contact.html")
+
+
 def upload_view(request):  # view for the upload form
     form = ImageForm
     return render(request, 'upload.html', {'form': form})
