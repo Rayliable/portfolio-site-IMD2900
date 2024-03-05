@@ -1,9 +1,8 @@
-
-# portfolio-site-IMD2900
+# PORTFOL.IO (working title)
+## 2 Cup Water 1 Cup Rice
+### Team Number _ (We are unsure what number, and are not sure how to find out which)
 
 Welcome to our portfolio project!
-
-We are Team 2 Cup Water, 1 Cup Rice!
 
 Our application is a portfolio website for artists and other creatives who wish to showcase their work online. It allows for uploaded or linked content, and tags to differentiate works' mediums or subject matter.
 
