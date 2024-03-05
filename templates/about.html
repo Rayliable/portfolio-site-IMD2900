@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Upload Images </title>
+    <title>Title</title>
     <!-- Link style sheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  rel="stylesheet" />
 </head>
@@ -33,12 +33,5 @@
       </div>
     </nav>
       <!-- end of navbar -->
-    <h1> Upload Images </h1> <!-- upload image form -->
-        <form action="{% url 'image_upload' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %} <!-- form syntax -->
-        {{ form.as_p }}
-        <br>
-        <button type="submit"> Upload </button> <!-- submit button -->
-    </form>
 </body>
 </html>
