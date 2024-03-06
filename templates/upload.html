@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title> Upload Images </title>
-</head>
-<body>
+{% extends "nav-bar.html" %}
+<!-- Used tutorial https://www.youtube.com/watch?v=Ev5xgwndmfc&ab_channel=TechWithTim, minus bootstrapping part -->
+{% block title %}Create an Account - Portfol.io{% endblock %}
+
+{% block content %}
     <h1> Upload Images </h1> <!-- upload image form -->
         <form action="{% url 'image_upload' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %} <!-- form syntax -->
-        {{ form.as_p }}
-        <br>
-        <button type="submit"> Upload </button> <!-- submit button -->
-    </form>
-</body>
-</html>
+            {% csrf_token %} <!-- form syntax -->
+            {{ form.as_p }}
+            <br>
+            <button type="submit"> Upload </button> <!-- submit button -->
+        </form>
+{% endblock %}
