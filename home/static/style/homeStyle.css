@@ -2,10 +2,6 @@ body {
     background-color: YellowGreen;
 }
 
-h1 {
-    color: navy;
-}
-
 .categories {
 
 }
@@ -25,6 +21,8 @@ h1 {
     height: auto;
 }
 
-homeWelcome {
-    background-color: black;
+.homeWelcome {
+    background-color: #1c1c1c;
+    padding: 50px;
+    color: #efffc8
 }
