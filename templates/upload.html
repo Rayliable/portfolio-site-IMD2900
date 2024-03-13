@@ -3,11 +3,19 @@
 {% block title %} Upload Images - Portfol.io{% endblock %}
 
 {% block content %}
-    <h1> Upload Images </h1> <!-- upload image form -->
+    <h1> Upload Image File </h1> <!-- upload image form -->
         <form action="{% url 'image_upload' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %} <!-- form syntax -->
             {{ form.as_p }}
             <br>
             <button type="submit"> Upload </button> <!-- submit button -->
         </form>
+    <h1> Upload Image URL </h1>
+        <form action="{% url 'url_upload' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token form2 %} <!-- form syntax -->
+            {{ form2.as_p }}
+            <br>
+            <button type="submit"> Upload </button> <!-- submit button -->
+        </form>
 {% endblock %}
+

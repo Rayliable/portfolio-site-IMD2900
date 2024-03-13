@@ -1,8 +1,19 @@
+from io import BytesIO
+from django.core.exceptions import ValidationError
 from django import forms
-from .models import UserUpload
+from django.contrib.sites import requests
+from .models import UserUpload, UserUploadURL
+from PIL import Image
+import requests
 
 
-class ImageForm(forms.ModelForm):
+class ImageForm(forms.ModelForm):  # upload form for file image
     class Meta:
         model = UserUpload
-        fields = ['title', 'image', 'tags', 'privacy']
+        fields = ['title', 'image_upload', 'tags', 'privacy']
+
+
+class ImageFormURL(forms.ModelForm):  # upload form for URL image
+    class Meta:
+        model = UserUploadURL
+        fields = ['title', 'url_upload', 'tags', 'privacy']
