@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 {%  load static %}
 
 <html lang="en">
@@ -12,17 +11,16 @@
       {% endblock %}
     </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="static/style/headerStyle.css">
   </head>
   <body>
-  {% block navbar %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">
-          {% block siteName %}
-            Portfol.io
-          {% endblock %}
-      </a>
+    {% block navbar %}
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #7ec4b5;">
+        <a class="navbar-brand ml-1 mr-4" href="/">
+          <img src="Media/siteImages/portfolioNameLogo.png" alt="site logo" style="width:auto; height:75px;">
+    </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav" >
         <ul class="navbar-nav">
           <li class="nav-item active">
             <a class="nav-link" href="/">Home</a>
@@ -43,7 +41,6 @@
 
   {% block content %}
   {% endblock %}
-
   </body>
 </html>
 

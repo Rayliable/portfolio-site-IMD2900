@@ -1,0 +1,30 @@
+body {
+    background-color: YellowGreen;
+}
+
+h1 {
+    color: navy;
+}
+
+.categories {
+
+}
+
+.categoryDisplay {
+    margin: 5%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+
+    justify-content: space-between;
+}
+
+.categoryimg {
+    width: 90%;
+    padding: 20px;
+    height: auto;
+}
+
+homeWelcome {
+    background-color: black;
+}
