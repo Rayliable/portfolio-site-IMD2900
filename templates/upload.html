@@ -11,7 +11,7 @@
             <button type="submit"> Upload </button> <!-- submit button -->
         </form>
     <h1> Upload Image URL </h1>
-        <form action="{% url 'image_upload' %}" method="post" enctype="multipart/form-data">
+        <form action="{% url 'url_upload' %}" method="post" enctype="multipart/form-data">
             {% csrf_token form2 %} <!-- form syntax -->
             {{ form2.as_p }}
             <br>

@@ -27,12 +27,20 @@ def image_upload(request):  # page for users to upload images
     if request.method == 'POST':
         print(request.FILES)
         form = ImageForm(request.POST, request.FILES)
-        form2 = ImageFormURL(request.POST)
         if form.is_valid:  # if form one was valid
             form.save()
-        if form2.is_valid():  # if form two was valid
-            form2.save()
         else:  # if invalid print errors
             form = ImageForm()
             form2 = ImageFormURL()
+    return redirect("upload_view")  # return to form view
+
+
+def url_upload(request):  # page for users to upload images
+    if request.method == 'POST':
+        print(request.FILES)
+        form = ImageFormURL(request.POST)
+        if form.is_valid:  # if form one was valid
+            form.save()
+        else:  # if invalid print errors
+            form = ImageForm()
     return redirect("upload_view")  # return to form view
