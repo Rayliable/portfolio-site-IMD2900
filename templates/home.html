@@ -5,37 +5,33 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-           {% if user.is_authenticated %}
-              Signed in!
-           {% else %}
-               <p><a href="/login">Please log in here.</a></p>
-           {% endif %}
-
-    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" ></script>
-      <h3 style="margin-left: 25px; font-size: 40px; text-align: center"> Categories </h3>
+
+    <div class="homeWelcome">
+        <h3 style="font-size: 45px; text-align: center"> WELCOME! </h3>
+        <h4 style="font-size: 20px; text-align: center"> Browse Categories! </h4>
+    </div>
     <!-- Scroll line for categories -->
-    <div style="margin-left: 20px; display: flex; white-space: nowrap; overflow-x: auto; -ms-overflow-style: none;">
-        <div style="margin-right: 20px">
+    <div class="categories">
+        <div class="categoryDisplay">
             <a href="#"> <!-- links to the page of art -->
-                <img src="{% static 'placeHolderImage.png' %}" alt="img" style="width: 300px; height: auto">
+                <img src="{% static 'placeHolderImage.png' %}" alt="img" class="categoryimg">
             </a>
             <a href="#"> <!-- links to the page of art -->
-                <img src="{% static 'placeHolderImage.png' %}" alt="img" style="width: 300px; height: auto">
+                <img src="{% static 'placeHolderImage.png' %}" alt="img" class="categoryimg">
             </a>
             <a href="#"> <!-- links to the page of art -->
-                <img src="{% static 'placeHolderImage.png' %}" alt="img" style="width: 300px; height: auto">
+                <img src="{% static 'placeHolderImage.png' %}" alt="img" class="categoryimg">
             </a>
             <a href="#"> <!-- links to the page of art -->
-                <img src="{% static 'placeHolderImage.png' %}" alt="img" style="width: 300px; height: auto">
+                <img src="{% static 'placeHolderImage.png' %}" alt="img" class="categoryimg">
             </a>
             <a href="#"> <!-- links to the page of art -->
-                <img src="{% static 'placeHolderImage.png' %}" alt="img" style="width: 300px; height: auto">
+                <img src="{% static 'placeHolderImage.png' %}" alt="img" class="categoryimg">
             </a>
             <a href="#"> <!-- links to the page of art -->
-                <img src="{% static 'placeHolderImage.png' %}" alt="img" style="width: 300px; height: auto">
+                <img src="{% static 'placeHolderImage.png' %}" alt="img" class="categoryimg">
             </a>
         </div>
     </div>
@@ -54,6 +50,8 @@
             <button> About Us </button>
         </a>
     </div>
+<link rel="stylesheet" type="text/css" href="static/style/homeStyle.css">
+
 {% endblock %}
 
 
