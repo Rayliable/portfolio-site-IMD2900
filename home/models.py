@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -52,3 +53,12 @@ class UserUploadURL(models.Model):  # user upload for URL images
 
     def __str__(self):
         return self.title
+
+
+# extends user model for pfp, display name, etc.
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    display_name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return 'User: '+str(self.user)
