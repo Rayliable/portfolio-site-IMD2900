@@ -1,6 +1,10 @@
+from django.contrib.auth.forms import UserChangeForm
 from django.shortcuts import render, redirect
+from django.urls import reverse_lazy
+
 from .forms import RegisterForm, UpdateUserForm
 from django.contrib.auth import login, logout
+from django.views.generic import UpdateView
 
 
 # Create your views here.
@@ -21,13 +25,10 @@ def logout_view(request):
     return render(request, "home.html")
 
 
-def update_profile(response):
-    if response.method == "POST":
-        form = UpdateUserForm(response.POST)
-        if form.is_valid():
-            form.save()
-        return redirect("/")
-    else:
-        form = UpdateUserForm()
-    return render(response, "registration/edit_profile.html", {"form": form})
+class ProfileEditView(UpdateView):
+    template_name = "edit_profile.html"
+    form_class = UserChangeForm
+    success_url = reverse_lazy('home')
 
+    def get_object(self, queryset=None):
+        return self.request.user
