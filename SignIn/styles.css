@@ -1,0 +1,184 @@
+body {
+    position: relative;
+
+    margin: 0;
+    background-color: #02C4B5;
+
+    /*this forcves it to be 1920 1080, not sure if its a good idea though*/
+    width: 1920px;
+    height: 1080px;
+}
+
+header {
+    background-color: #2B2525;
+    height: 108px;
+    width: 1920px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.left-header {
+    /* took me longer than it should have tbh */
+    display: flex;
+    align-items: center;
+}
+
+.left-header h1 {
+    margin-left: 30px;
+}
+
+header img {
+    height: 80px;
+    width: auto;
+}
+
+header h1 {
+    color: #FFFFFF;
+    font-family: 'Rockwell';
+    font-size: 54px;
+    text-align: left;
+    margin-left: 10px;
+
+}
+
+header .user {
+    display: flex;
+    align-items: center;
+}
+
+header .user p {
+    color: #FFFFFF;
+    font-family: 'Rockwell';
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+main {
+
+    display: flex;
+    justify-content: space-between;
+    height: 660px;
+    margin-top: 75px;
+    margin-left: 110px;
+}
+
+main .left {
+    position: relative;
+    text-align: left;
+}
+
+main .left::after {
+    /* pain */
+    content: "";
+    position: absolute;
+    height: 600px;
+    border-right: 8px solid #EFFFC8;
+    top: 70px;
+    right: -475px; /* PUNCHNIG A HOLE IN THE CIELING ****WHHHYYY**** IS THAT THE RIGHT ANSWER */
+   
+}
+
+main .left h2 {
+    color: #EFFFC8;
+    font-family: 'Rockwell';
+    font-size: 50px;
+}
+
+main .left form label {
+    color: #100B00;
+    font-family: 'Rockwell';
+    font-size: 19px;
+}
+
+main .left form input {
+    height: 38px;
+    width: 300px;
+    border: 2px solid #CCF5AC;
+    background-color: #02C4B5;
+    margin-bottom: 18px;
+    display: block;
+    font-size: 18px;
+    outline: none;
+}
+main .left form input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+}
+
+main .left form button {
+    border-radius: 40px;
+    width: 290px;
+    height: 64px;
+    background-color: #100B00;
+    color: #FFFFFF;
+    font-family: 'Rockwell';
+    font-size: 31px;
+    margin-top: 50px;
+    border: none; /*default border did kinda look cool tho */
+}
+
+main .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+    margin-right: 200px;/*ngl didnt know how to center it naturally */
+}
+
+main .right h2 {
+    color: #EFFFC8;
+    font-family: 'Rockwell';
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+main .right p {
+    color: #EFFFC8;
+    font-family: 'Rockwell';
+    font-size: 20px;
+    margin-bottom: 130px;
+}
+
+main .right .images img {
+    width: 111px;
+    height: 85px;
+    margin: 0 30px;
+}
+
+main .right button {
+    width: 275px;
+    border-radius: 40px;
+    border: none;
+    height: 50px;
+    background-color: #CCF5AC;
+    color: #100B00;
+    font-family: 'Rockwell';
+    font-size: 30px;
+    margin-top: 100px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #2B2525;
+    height: 108px;
+    width: 1920px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+footer button {
+    color: #FFFFFF;
+    font-family: 'Rockwell';
+    font-size: 35px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    margin-right: 114px;
+
+}
