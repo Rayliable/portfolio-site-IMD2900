@@ -8,9 +8,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("home.urls")),
-    path('register/', regv.CreateUserView.as_view(), name="register"),
-    path('edit_profile/', regv.ProfileEditView.as_view(), name="edit_profile"),
-    path('logout/', regv.logout_view, name="logout"),
+    path('', include("register.urls")),
     path('', include("django.contrib.auth.urls")),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

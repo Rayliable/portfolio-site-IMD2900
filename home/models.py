@@ -26,6 +26,8 @@ class UserUpload(models.Model):
     tags = models.CharField(max_length=30, choices=OPTIONS, default=untagged)
     privacy = models.CharField(max_length=30, choices=OPTIONS2, default=public)
 
+    # uploader = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+
     def __str__(self):
         return self.title
 
@@ -51,18 +53,9 @@ class UserUploadURL(models.Model):  # user upload for URL images
     tags = models.CharField(max_length=30, choices=OPTIONS, default=untagged)
     privacy = models.CharField(max_length=30, choices=OPTIONS2, default=public)
 
+    # uploader = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+
     def __str__(self):
         return self.title
 
 
-# extends user model for pfp, display name, etc.
-class UserProfile(models.Model):
-    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-    username = models.CharField(max_length=255, null=True)
-    email = models.CharField(max_length=255, null=True)
-    display_name = models.CharField(max_length=255)
-    bio = models.TextField(blank=True, null=True)
-    profile_pic = models.ImageField(upload_to='user_upload/pfp/', blank=True, null=True)
-
-    def __str__(self):
-        return 'User: '+str(self.user)

@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import UserUpload, UserUploadURL, UserProfile
+from .models import UserUpload, UserUploadURL
+from register.models import UserProfile
 
 # Register your models here.
 admin.site.register(UserUpload)

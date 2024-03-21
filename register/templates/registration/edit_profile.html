@@ -1,0 +1,22 @@
+{% extends "nav-bar.html" %}
+{% block title %}Edit {{ page_user }} - Portfol.io{% endblock %}
+
+{% block content %}
+    <h1>{{ page_user }}
+        Edit Profile: {{ page_user.username }}</h1>
+    <br><br>
+    Bio:<br>
+    {{ page_user.bio }}
+
+    <br>
+
+    <br><br>
+    <form method="POST" class="form-group">
+        {% csrf_token %}
+        {{ form }}
+        Current Profile Picture: <br>
+        <img src="http://127.0.0.1:8000/Media/{{ page_user.profile_pic }}" alt="Profile Picture" style="width:100px;height:100px;">
+        <br><br>
+        <button type="submit" class="btn btn-success">Save</button>
+    </form>
+{% endblock %}
