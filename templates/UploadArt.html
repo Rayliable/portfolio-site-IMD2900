@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/home/static/style/UploadStyle.css">
+    <title>Upload Image</title>
+</head>
+<body>
+    <div class="container">
+        <!-- ===== ===== Header/Navbar ===== ===== -->
+        <header>
+            <div class="containe2">
+                <nav>
+                    <img src="/Media/siteImages/portfolioNameLogo.png" class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Add Image</a></li>
+                        <li><a href="#">Signed In</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="title">VIEW ARTWORK</div>
+
+        <div class="detail">
+            <div class="image">
+                <img src="" alt="Uploaded Image"> <!-- Placeholder image -->
+            </div>
+            <div class="content">
+                <h1 class="name">Artwork Title</h1>
+                <h2 class="Media">Media Type</h2>
+                <div class="buttons">
+                    <button>Check Profile</button>
+                </div>
+                <div class="description">Description of the artwork goes here.</div>
+            </div>
+        </div>
+
+        <div class="container2">
+            <input type="file" id="file" accept="image/*" hidden>
+            <div class="img-area" data-img="">
+                <i class='bx bxs-camera icon'></i>
+                <h3>Upload Image</h3>
+                <p>Image size must be less than <span>2MB</span></p>
+            </div>
+            <button class="select-image">Select Image</button>
+        </div>
+        <button class="buttond">Description<br></button>
+        <button class="button2">Title</button>
+
+        <div class="titles">More From This Artist</div>
+        <div class="listProduct">
+            <!-- Placeholder content for products -->
+            <a href="#" class="item">
+                <img src="/Media/ImgTemp/4.png" alt="Product 1">
+                <h2>Art 1</h2>
+                <div class="Media">Media Type</div>
+            </a>
+            <a href="#" class="item">
+                <img src="/Media/ImgTemp/7.png" alt="Product 2">
+                <h2>Art 2</h2>
+                <div class="Media">Media Type</div>
+            </a>
+           
+        </div>
+    </div>
+
+    <script>
+        const selectImage = document.querySelector('.select-image');
+        const inputFile = document.querySelector('#file');
+        const imgArea = document.querySelector('.img-area');
+
+        selectImage.addEventListener('click', function () {
+            inputFile.click();
+        })
+
+        inputFile.addEventListener('change', function () {
+            const image = this.files[0];
+            if (image.size < 2000000) {
+                const reader = new FileReader();
+                reader.onload = ()=> {
+                    const img = imgArea.querySelector('img');
+                    if (img) {
+                        img.src = reader.result;
+                    } else {
+                        const newImg = document.createElement('img');
+                        newImg.src = reader.result;
+                        imgArea.appendChild(newImg);
+                    }
+                    imgArea.classList.add('active');
+                    imgArea.dataset.img = image.name;
+                }
+                reader.readAsDataURL(image);
+            } else {
+                alert("Image size more than 2MB");
+            }
+        });
+    </script>
+</body>
+</html>

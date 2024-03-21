@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtGAllery</title>
+    <link rel="stylesheet" href="/home/static/style/Gallerystyle.css">
+    
+</head>
+<body>
+   
+    <div class="container">
+        <nav>
+            <img src="/Media/siteImages/portfolioNameLogo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Add Image</a></li>
+                <li><a href="#">Signed In</a></li>
+            </ul>
+        </nav>
+        <div class="title">VIEW ARTWORK</div>
+        <div class="ViewArtPage">
+            <div class="image">
+                <img src="">
+            </div>
+            <div class="content">
+                <h1 class="name"></h1>
+                <h2 class="Media"></h2>
+                <div class="buttons">
+                    <button>Check Profile</button>
+                </div>
+                <div class="description"></div>
+            </div>
+        </div>
+
+        <div class="titlesViewArtPage">More From This Artist</div>
+        <div class="listProduct"></div>
+    </div>
+
+    
+
+    <script>
+        let products = null;
+        // get datas from file json
+        fetch('products.json')
+            .then(response => response.json())
+            .then(data => {
+                products = data;
+                showViewArtPage();
+        })
+
+        function showViewArtPage(){
+            // remove datas default from HTML
+            let ViewArtPage = document.querySelector('.ViewArtPage');
+            let listProduct = document.querySelector('.titlesViewArtPage + .listProduct');
+            let productId =  new URLSearchParams(window.location.search).get('id');
+            let thisProduct = products.filter(value => value.id == productId)[0];
+            //if there is no product with id = productId => return to home page
+            if(!thisProduct){
+                window.location.href = "/";
+            }
+
+            ViewArtPage.querySelector('.image img').src = thisProduct.image;
+            ViewArtPage.querySelector('.name').innerText = thisProduct.name;
+            ViewArtPage.querySelector('.Media').innerText = thisProduct.Media;
+            ViewArtPage.querySelector('.description').innerText = thisProduct.description;
+
+
+            (products.filter(value => value.id != productId)).forEach(product => {
+                let newProduct = document.createElement('a');
+                newProduct.href = '/ViewArtPage.html?id=' + product.id;
+                newProduct.classList.add('item');
+                newProduct.innerHTML = 
+                `<img src="${product.image}" alt="">
+                <h2>${product.name}</h2>
+                <div class="Media">${product.Media}</div>`;
+                listProduct.appendChild(newProduct);
+            });
+        }
+
+    </script>
+</body>
+</html>
