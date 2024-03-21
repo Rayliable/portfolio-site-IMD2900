@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import ImageForm, ImageFormURL
-
+from .models import UserUpload, UserUploadURL
 
 # Create your views here.
 
@@ -44,3 +44,15 @@ def url_upload(request):  # page for users to upload images
         else:  # if invalid print errors
             form = ImageForm()
     return redirect("upload_view")  # return to form view
+
+
+def photography(request):
+    # Filter through images based on tag and privacy
+    filtered_images = UserUpload.objects.filter(tags='option_two', privacy='option_one')
+    return render(request, 'photography.html', {'images': filtered_images})
+
+
+def illustration(request):
+    # Filter through images based on tag and privacy
+    filtered_images = UserUpload.objects.filter(tags='option_three', privacy='option_one')
+    return render(request, 'illustration.html', {'images': filtered_images})
