@@ -11,6 +11,7 @@ class UserProfile(models.Model):
     display_name = models.CharField(max_length=255)
     bio = models.TextField(blank=True, null=True)
     profile_pic = models.ImageField(upload_to='user_upload/pfp/', blank=True, null=True)
+    email = User.email
 
     def __str__(self):
         return 'Profile: ' + str(self.user)
