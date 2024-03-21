@@ -3,6 +3,8 @@ from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
 from PIL import Image
 from io import BytesIO
+
+
 # Create your models here.
 
 # user uploads mode (includes title, image, tags)
