@@ -73,3 +73,7 @@ def extra_view(request):  # home page of site
 
 def detail_view(request):  # home page of site
     return render(request, "detail.html")
+
+
+def SignIn_view(request):  # home page of site
+    return render(request, "register/SignIn.html")

@@ -1,22 +1,21 @@
-<!DOCTYPE html>
-<html>
+{% extends "nav-bar.html" %}
+{% load static %}
+{% block title %}
+    Log In - Portfol.io
+{% endblock %}
+
+{% block content %}
 <head>
-    <link rel="stylesheet" type="text/css" href="SigninStyle.css">
+    <link rel="stylesheet" type="text/css" href="/static/style/SigninStyle.css">
+    <title>Log In</title>
 </head>
 <body>
     <header>
-        <div class="left-header">
-            <img src="/Media/siteImages/portfolioNameLogo.png" alt="Logo">
-            <h1>Sign Up</h1>
-        </div>
-        <div class="user">
-            <p>Username</p>
-            <img src="userIcon.png" alt="User Icon">
-        </div>
+            <h2 style="font-size: 45px; text-align: center">Register / Log In</h2>
     </header>
     <main>
         <div class="left">
-            <h2>Create An Account</h2>
+            <h2 style="font-size: 45px; text-align: center">Create An Account</h2>
             <form>
                 <label for="username">Username</label>
                 <input type="text" id="username">
@@ -32,6 +31,7 @@
                 <button>SIGN UP</button>
             </form>
         </div>
+        <div class ="line"></div>
         <div class="right">
             <h2>Already a User?</h2>
             <p>Click here to log in</p>
@@ -43,12 +43,5 @@
             <button>LOG IN</button>
         </div>
     </main>
-    <footer>
-        <button>←</button>
-        <button>ABOUT</button>
-        <button>FAQ</button>
-        <button>ACCOUNT</button>
-        <button>TERMS</button>
-    </footer>
 </body>
-</html>
+{% endblock %}

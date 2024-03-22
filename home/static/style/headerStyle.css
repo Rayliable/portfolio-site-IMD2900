@@ -64,3 +64,36 @@ nav ul li a:hover::after{
 .header-text h1 span {
     color: #2B2525;
 }
+
+footer {
+    position: absolute;
+    top: 100%;
+    background-color: #1c1c1c;
+    height: 108px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 20px;
+    color: #EFFFC8;
+}
+
+.footer-links {
+    position: absolute;
+    top: 100%;
+    background-color: #1c1c1c;
+    height: 108px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+footer button {
+    color: #FFFFFF;
+    font-family: 'Rockwell', serif;
+    font-size: 35px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    margin-right: 114px;
+}

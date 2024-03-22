@@ -14,5 +14,6 @@ urlpatterns = [
     path("viewart_view/", views.viewart_view, name="viewart_view"),
     path("extra_view/", views.extra_view, name="extra_view"),
     path("detail_view/", views.detail_view, name="detail_view"),
+    path("SignIn/", views.SignIn_view, name="SignIn_view"),
 
 ]
