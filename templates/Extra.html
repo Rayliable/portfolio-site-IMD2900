@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "nav-bar.html" %}
+{% load static %}
+{% block title %}
+    Portfolio App
+{% endblock %}
+
+{% block content %}
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/home/static/style/Gallerystyle.css">
+    <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
+    <link rel="stylesheet" href="/static/style/Gallerystyle.css">
 </head>
 <body>
     <div class="container">
@@ -50,4 +54,4 @@
 
     </script>
 </body>
-</html>
+{% endblock %}

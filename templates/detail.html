@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "nav-bar.html" %}
+{% load static %}
+{% block title %}
+    Portfolio App
+{% endblock %}
+
+{% block content %}
+
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
 
     <!-- ===== ===== Custom Css ===== ===== -->
-    <link rel="stylesheet" href="/home/static/style/AccountStyle.css">
+    <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
+    <link rel="stylesheet" href="/static/style/AccountStyle.css">
 
     <!-- ===== ===== Remix Font Icons Cdn ===== ===== -->
 
@@ -21,24 +25,6 @@
 
     <!-- ===== ===== Main-Container ===== ===== -->
     <div class="container">
-
-        <!-- ===== ===== Header/Navbar ===== ===== -->
-                <header>
-                    <div class="containe2">
-                        <nav>
-                            <img src="/Media/siteImages/portfolioNameLogo.png" class="logo">
-                            <ul>
-                                <li><a hfref="#">Home</a></li>
-                                <li><a hfref="#">About</a></li>
-                                <li><a hfref="#">Contact</a></li>
-                                <li><a hfref="#">Add Image</a></li>
-                                <li><a hfref="#">Signed In</a></li>
-                            </ul>
-                            
-                        </nav>
-                </div>
-                </header>
-
 
         <!-- ===== ===== User Main-Profile ===== ===== -->
         <section class="userProfile card">
@@ -54,39 +40,39 @@
                 <div class="title">Your Gallery</div>
 
                 <div class="img-area" data-img="">
-                   
+
                     <button class="select-image">Select Image</button>
-                    <p></span></p>
+                    <p></p>
                 </div>
-                    
-              
+
+
 
                 <div class="img-area4" data-img="">
-                    
+
                     <button class="select-image3">Select Image</button>
-                    <p></span></p>
+                    <p></p>
                 </div>
 
                 <div class="img-areas" data-img="">
-                   
+
                     <button class="select-image">Select Image</button>
-                    <p></span></p>
+                    <p></p>
                 </div>
 
-                
+
                 <div class="img-area3" data-img="">
-                    
+
                     <button class="select-image3">Select Image</button>
-                    <p></span></p>
+                    <p></p>
                 </div>
 
                 <button class="select-images">Save Changes</button>
 
-            
+
 
         </div>
-        
-            <!-- ===== ===== Work Contaienr ===== ===== -->
+
+            <!-- ===== ===== Work Container ===== ===== -->
             <div class="Info">
                 <h1 class="heading">UserName</h1>
                 <div class="primary">
@@ -98,7 +84,7 @@
                 <div class="secondary">
                     <h1>Banner <br> </h1>
                     <span>Edit</span>
-                    
+
                 </div>
 
                 <div class="edit1">
@@ -112,12 +98,13 @@
             <section class="banner card">
                 <div class="banner">
                     <figure><img src="/Media/ImgTemp/rec1.png" alt="banner" width="250px" height="250px"></figure>
-                    
+
                 </div>
             </section>
-
-            
-           
+            </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
-
-</html>
+{% endblock %}

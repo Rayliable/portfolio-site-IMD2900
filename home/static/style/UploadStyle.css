@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    font-family: Roboto;
+    font-family: Rockwell;
     background-color: #7EC4B5;
 }
 
@@ -89,7 +89,7 @@ nav ul li a:hover::after{
 }
 .listProduct .item img{
     width: 90%;
-    filter: drop-shadow(0 10px 09px,#2B2525);
+    filter: drop-shadow(0 10px 09px #2B2525);
 }
 .listProduct{
     display: grid;
@@ -195,7 +195,7 @@ nav ul li a:hover::after{
     
     position: absolute;
     top: 6cm;
-    bottom: 4 px; 
+    bottom: 4px;
     right: 4cm; 
     background-color: #EFFFC8; 
     color: #7EC4B5;
@@ -236,11 +236,11 @@ nav ul li a:hover::after{
  
     margin-bottom: 20px;
     margin-top: -11.5cm;
-    margin-right: 10 cm;
+    margin-right: 10cm;
 }
 .buttonds button{
     background-color: #c74343;
-    border: 2 px solid;
+    border: 2px solid;
     padding:  1px;
     padding-left: 5%;
     padding-right: 40%;

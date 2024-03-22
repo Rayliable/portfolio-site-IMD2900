@@ -5,7 +5,7 @@ body{
 }
 
 a{
-    color: #FFFFFF;
+    color: unset;
     text-decoration: none;
 }
 /*-------------header--------/*/
@@ -63,4 +63,18 @@ nav ul li a:hover::after{
 }
 .header-text h1 span {
     color: #2B2525;
+}
+
+.tagHeader {
+    background-color: #1c1c1c;
+    padding: 50px;
+    color: #efffc8;
+}
+
+.tagHeader img {
+    padding: 5px;
+    width: 150px;
+    height: auto;
+    margin: auto;
+    display: block;
 }

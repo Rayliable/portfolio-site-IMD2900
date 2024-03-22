@@ -12,11 +12,11 @@ header {
 
 .container {
     width: 90%; /* Width of the container */
-  
+
 }
 .container4 {
     padding: 4% 9%;
-    
+
 }
 
 
@@ -32,19 +32,19 @@ nav {
     margin-left: -190px;
 }
 nav ul {
-    
+
     padding: 0;
     margin: 0;
 }
 
 nav ul li {
-    
+
     display: inline-block;
     margin:  10px; /* Adjust margin as needed */
 }
 
 nav ul li a {
-    
+
     color: #fff;
     text-decoration: none;
     font-size: 18px;
@@ -52,7 +52,7 @@ nav ul li a {
     cursor: pointer;
 }
 nav ul li a::after{
-    
+
     content: '';
     width: 0;
     height: 3px;
@@ -66,15 +66,15 @@ nav ul li a:hover::after{
     width:100%;
 }
 .header-text{
-    
+
     margin-top: 25%;
     font-size: 25px;
-    
+
 }
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
-    
+
 }
 .header-text h1 span{
     color: #2B2525;
@@ -223,8 +223,8 @@ header {
     padding: var(--p-0-4) var(--p-1-0);
     border-radius: 0.4rem;
   }
-  
-  
+
+
 .container .card {
   background: var(--glass-bg);
   backdrop-filter: blur(0rem);
@@ -257,7 +257,7 @@ header {
     backdrop-filter: none;
     box-shadow: none;
   }
-  
+
 .container .userProfile .profile figure img {
   width: 14rem;
   height: 14rem;
@@ -266,7 +266,7 @@ header {
 .container .banner .banner figure img {
     width: 38rem;
     height: 17rem;
- 
+
   }
 
 /* ===== =====>>  .Gallery .Info Css Start  <<===== ===== */
@@ -278,13 +278,13 @@ header {
   color: rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
   margin-bottom: var(--m-1-5);
-  
+
   text-align: center;
 }
 
 .Gallery .Info .heading::before,
 .Gallery .skills .heading::before {
-  
+
   position: absolute;
   bottom: 0;
   right: 0;
@@ -333,7 +333,7 @@ header {
 	padding: 0;
 	box-sizing: border-box;
 	font-family: Roboto;
-    
+
 }
 
 :root {

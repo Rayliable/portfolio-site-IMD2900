@@ -1,25 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "nav-bar.html" %}
+{% load static %}
+{% block title %}
+    View Piece - Portfol.io
+{% endblock %}
+
+{% block content %}
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtGAllery</title>
-    <link rel="stylesheet" href="/home/static/style/Gallerystyle.css">
+    <title>ArtGallery</title>
+    <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
+    <link rel="stylesheet" href="/static/style/Gallerystyle.css">
     
 </head>
 <body>
    
     <div class="container">
-        <nav>
-            <img src="/Media/siteImages/portfolioNameLogo.png" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Add Image</a></li>
-                <li><a href="#">Signed In</a></li>
-            </ul>
-        </nav>
         <div class="title">VIEW ARTWORK</div>
         <div class="ViewArtPage">
             <div class="image">
@@ -82,4 +76,4 @@
 
     </script>
 </body>
-</html>
+{% endblock %}
