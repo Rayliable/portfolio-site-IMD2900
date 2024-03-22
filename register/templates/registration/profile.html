@@ -1,20 +1,41 @@
 {% extends "nav-bar.html" %}
-{% block title %}{{ page_user }} - Portfol.io{% endblock %}
+{% load static %}
+{% block title %}Profile - Portfol.io{% endblock %}
 
 {% block content %}
-    <h1>Profile-username: {{ page_user.username }}</h1>
-    U: {{ page_user }}
+    <h1>Profile: {{ user.username }}</h1>
 
-    <br><br>
-    Display name:<br>
-    {{ page_user.display_name }}
-
-    <br><br>
-    Bio:<br>
-    {{ page_user.bio }}
-
-    <br><br>
-    Current Profile Picture: <br>
-    <img src="http://127.0.0.1:8000/Media/{{ page_user.profile_pic }}" alt="Profile Picture" style="width:100px;height:100px;">
+    <img src="{{ user.profile.image.url }}" width=200 height=200 alt="profile picture">
+    
+    <h2>{{ user.email }}</h2>
 
 {% endblock %}
+
+
+
+
+
+
+
+
+{#{% extends "nav-bar.html" %}#}
+{#{% block title %}{{ page_user }} - Portfol.io{% endblock %}#}
+{##}
+{#{% block content %}#}
+{#    <h1>Profile-username: {{ page_user.username }}</h1>#}
+{#    U: {{ page_user }}#}
+{##}
+{#    <br><br>#}
+{#    Display name:<br>#}
+{#    {{ page_user.display_name }}#}
+{##}
+{#    <br><br>#}
+{#    Bio:<br>#}
+{#    {{ page_user.bio }}#}
+{##}
+{#    <br><br>#}
+{#    Current Profile Picture: <br>#}
+{#    <img src="http://127.0.0.1:8000/Media/{{ page_user.profile_pic }}" alt="Profile Picture" style="width:100px;height:100px;">#}
+{##}
+{#{% endblock %}#}
+

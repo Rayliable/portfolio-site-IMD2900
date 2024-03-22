@@ -10,5 +10,8 @@ urlpatterns = [
     path('', include("home.urls")),
     path('', include("register.urls")),
     path('', include("django.contrib.auth.urls")),
-    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # hey dan, just wanted to make it easier to change for deployment :)
