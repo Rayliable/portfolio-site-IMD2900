@@ -3,39 +3,12 @@
 {% block title %}Profile{% endblock %}
 
 {% block content %}
-    <h1>Profile: {{ user.username }}</h1>
+    <h1>Profile: {{ user.profile.display_name }}</h1>
 
     <img src="{{ user.profile.image.url }}" width=200 height=200 alt="profile picture">
     
-    <h2>{{ user.email }}</h2>
+    <h2>Username: {{ user.username }}</h2>
+    <h2>Email: {{ user.email }}</h2>
+    <h2>Bio: {{ user.profile.bio }}</h2>
 
 {% endblock %}
-
-
-
-
-
-
-
-
-{#{% extends "nav-bar.html" %}#}
-{#{% block title %}{{ page_user }} - Portfol.io{% endblock %}#}
-{##}
-{#{% block content %}#}
-{#    <h1>Profile-username: {{ page_user.username }}</h1>#}
-{#    U: {{ page_user }}#}
-{##}
-{#    <br><br>#}
-{#    Display name:<br>#}
-{#    {{ page_user.display_name }}#}
-{##}
-{#    <br><br>#}
-{#    Bio:<br>#}
-{#    {{ page_user.bio }}#}
-{##}
-{#    <br><br>#}
-{#    Current Profile Picture: <br>#}
-{#    <img src="http://127.0.0.1:8000/Media/{{ page_user.profile_pic }}" alt="Profile Picture" style="width:100px;height:100px;">#}
-{##}
-{#{% endblock %}#}
-
