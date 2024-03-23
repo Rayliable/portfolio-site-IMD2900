@@ -6,12 +6,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      {% block title %}
-        Portfol.io
-      {% endblock %}
-    </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  rel="stylesheet" />
+    <title>{% block title %}{% endblock %} - Portfol.io</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
   </head>
   <body>
   {% block navbar %}
@@ -46,6 +42,7 @@
                 <a class="nav-link" href="/edit_profile"> Edit Profile </a>
               </li>
               <li class="nav-item">
+              <!--<form method="post" action="{% url 'logout' %}">{% csrf_token %}<button>Log Out</button></form>-->
                 <a class="nav-link" href="/logout"> Log Out </a>
               </li>
           {% else %}
@@ -61,6 +58,11 @@
     </nav>
   {% endblock %}
 
+  {% if messages %}
+      {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+      {% endfor %}
+  {% endif %}
   {% block content %}
   {% endblock %}
 

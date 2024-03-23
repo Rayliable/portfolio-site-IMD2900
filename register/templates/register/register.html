@@ -1,0 +1,20 @@
+{% extends "nav-bar.html" %}
+{% block title %}Register{% endblock %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">
+                Welcome!
+            </legend>
+            {{ form.as_p }}
+        </fieldset>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Register</button>
+        </div>
+    </form>
+    <div class="border-top pt-2">
+        <small class="text-muted">Already have an account? </small> <a class="ml-2" href="{% url 'login' %}">Log in here.</a>
+    </div>
+{% endblock %}

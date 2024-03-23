@@ -1,0 +1,11 @@
+{% extends "nav-bar.html" %}
+{% block title %}Logged Out{% endblock %}
+
+{% block content %}
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Logged out.</legend>
+    </fieldset>
+    <div class="border-top pt-2">
+        <small class="text-muted">Miss us already? </small> <a class="ml-2" href="{% url 'login' %}">Login in again.</a>
+    </div>
+{% endblock %}

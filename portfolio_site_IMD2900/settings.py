@@ -124,4 +124,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Use this to determine where users are directed after logging in/out!
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'login'
-LOGOUT_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = 'login'
