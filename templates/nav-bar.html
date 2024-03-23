@@ -85,19 +85,62 @@
 {% endblock %}
 
 {% block content %}
+{#    PAGE CONTENT IS HERE! LEAVE THIS BLANK!     #}
 {% endblock %}
-{#    USE THIS TO MAKE THE FOOTER!! It makes it appear on all pages!#}
-{#      <footer>#}
-{#          <ul class="footer-links">#}
-{#          <li class="nav-item">#}
-{#            <a class="nav-link" href="/about_us">About</a>#}
-{#          </li>#}
-{#          <li class="nav-item">#}
-{#            <a class="nav-link" href="/contact_us">Contact</a>#}
-{#          </li>#}
-{#          </ul>#}
-{#    </footer>#}
+
 </body>
+{#FOOTER DESIGN FOUND VIA BOOTSTRAP: https://mdbootstrap.com/docs/standard/navigation/footer/#}
+<footer class="text-center text-lg-start" style="background-color: #1c1c1c; padding:2%; color: #EFFFC8">
+  <!-- Grid container -->
+  <div class="footer-links">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <ul class="list-unstyled">
+          <li>
+            <a href="/" class="footer-links">Home</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="/contact_us" class="footer-links">Contact Us!</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <ul class="list-unstyled">
+          <li>
+            <a href="/about_us" class="footer-links">About Us!</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <ul class="list-unstyled">
+          <li>
+            <a href="#" class="footer-links">Back to Top!</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center" style="background-color: #1c1c1c;">
+    © 2024 Copyright: 2CupWater1CupRice
+  </div>
+  <!-- Copyright -->
+</footer>
 </html>
 
 

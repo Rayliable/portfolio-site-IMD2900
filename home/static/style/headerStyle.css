@@ -69,7 +69,7 @@ footer {
     position: absolute;
     top: 100%;
     background-color: #1c1c1c;
-    height: 108px;
+    height: 150px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -81,11 +81,16 @@ footer {
     position: absolute;
     top: 100%;
     background-color: #1c1c1c;
-    height: 108px;
+    height: 150px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
     padding: 0 20px;
+    font-size: 20px;
+}
+
+.footer-links a:hover {
+    color: #85cb33;
 }
 
 footer button {
