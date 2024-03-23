@@ -16,15 +16,17 @@
         <h4 style="font-size: 20px; text-align: center"> Current Tag: </h4>
         <h3 style="font-size: 45px; text-align: center"> ILLUSTRATION </h3>
     </div>
-    {% for image in images %}  <!-- prints out all images -->
-        {% if image.image_compressed %} <!-- makes sure one exists -->
-            <img src="{{ image.image_compressed.url }}" alt="Image" style="width: 250px; height: 250px">
-        {% endif %}
-    {% endfor %}
-    {% for image in url_images %}  <!-- prints out all images -->
-        {% if image.url_upload %} <!-- makes sure one exists -->
-            <img src="{{ image.url_upload }}" alt="Image" style="width: 250px; height: 250px">
-        {% endif %}
-    {% endfor %}
+    <div class="imageDisplay">
+        {% for image in images %}  <!-- prints out all images -->
+            {% if image.image_compressed %} <!-- makes sure one exists -->
+                <img src="{{ image.image_compressed.url }}" alt="Image" style="margin: 0.5%; width: auto; height: 120px">
+            {% endif %}
+        {% endfor %}
+        {% for image in url_images %}  <!-- prints out all images -->
+            {% if image.url_upload %} <!-- makes sure one exists -->
+                <img src="{{ image.url_upload }}" alt="Image" style="width: 250px; height: 250px">
+            {% endif %}
+        {% endfor %}
+    </div>
     </body>
 {% endblock %}
