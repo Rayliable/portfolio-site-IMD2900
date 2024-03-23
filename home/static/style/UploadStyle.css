@@ -21,60 +21,6 @@ header {
 
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    
-}
-
-.logo{
-    width: 200px;
-}
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-    
-    
-}
-nav ul li a {
-    color: #0009;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-    cursor: pointer;
-}
-nav ul li a::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background:  #EFFFC8;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-nav ul li a:hover::after{
-    width:100%;
-}
-.header-text{
-    
-    margin-top: 25%;
-    font-size: 25px;
-    
-}
-.header-text h1{
-    font-size: 60px;
-    margin-top: 20px;
-    
-}
-.header-text h1 span{
-    color: #2B2525;
-
-}
-
 
 /*/--------------rest --------/*/
 .title{
