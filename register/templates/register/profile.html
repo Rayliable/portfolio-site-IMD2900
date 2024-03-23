@@ -1,0 +1,14 @@
+{% extends "nav-bar.html" %}
+{% load static %}
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+    <h1>Profile: {{ user.profile.display_name }}</h1>
+
+    <img src="{{ user.profile.image.url }}" width=200 height=200 alt="profile picture">
+    
+    <h2>Username: {{ user.username }}</h2>
+    <h2>Email: {{ user.email }}</h2>
+    <h2>Bio: {{ user.profile.bio }}</h2>
+
+{% endblock %}

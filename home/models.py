@@ -3,6 +3,7 @@ from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
 from PIL import Image
 from io import BytesIO
+from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -79,6 +80,8 @@ class UserUploadURL(models.Model):  # user upload for URL images
     url_upload = models.URLField()
     tags = models.CharField(max_length=30, choices=OPTIONS, default=untagged)
     privacy = models.CharField(max_length=30, choices=OPTIONS2, default=public)
+
+    # uploader = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.title
