@@ -7,7 +7,7 @@
 
 {% block content %}
     <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
-    <link rel="stylesheet" type="text/css" href="/static/style/UploadStyle.css">
+   
     <h1> Upload Image File </h1> <!-- upload image form -->
         <form action="{% url 'image_upload' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %} <!-- form syntax -->

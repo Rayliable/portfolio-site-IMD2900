@@ -93,9 +93,8 @@ html {
     right: 0.6rem;
     font-weight: 700;
     font-size: var(--s-fs);
-    color: var(--f5-color);
     background: #e6f2ff;
-    color: #000;
+
     padding: var(--p-0-4) var(--p-1-0);
     border-radius: 0.4rem;
   }
@@ -106,9 +105,7 @@ html {
     right: 1rem;
     font-weight: 700;
     font-size: var(--s-fs);
-    color: var(--f5-color);
     background: #c7efeb;
-    color: #000;
     padding: var(--p-0-4) var(--p-1-0);
     border-radius: 0.4rem;
   }
@@ -118,10 +115,8 @@ html {
     right: 18rem;
     font-weight: 700;
     font-size: var(--s-fs);
-    color: var(--f5-color);
     background: var(--glass-bg);
     background: #c7efeb;
-    color: #000;
     padding: var(--p-0-4) var(--p-1-0);
     border-radius: 0.4rem;
   }
@@ -192,7 +187,6 @@ html {
   right: 0;
   height: 0.1rem;
   width: 88%;
-  background: var(--bg6-color);
 }
 
 .Gallery .Info .primary,
@@ -203,7 +197,6 @@ html {
 .Gallery .Info .primary h1,
 .Gallery .Info .secondary h1 {
   font-size: var(--l-fs);
-  color: var(--f3-color);
   margin-bottom: var(--m-0-6);
 }
 
@@ -213,9 +206,7 @@ html {
   right: -0.5rem;
   font-weight: 700;
   font-size: var(--s-fs);
-  color: var(--f5-color);
   background: #c7efeb;
-  color: #000;
   padding: var(--p-0-4) var(--p-1-0);
   border-radius: 0.4rem;
 }
@@ -234,7 +225,7 @@ html {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: Roboto;
+
 
 }
 
@@ -435,13 +426,3 @@ html {
     }
 }
 
-@media (max-width: 480px) {
-    header {
-        flex-direction: column;
-    }
-
-    nav ul {
-        padding: 0;
-        margin: calc(10px * var(--margin-scale-factor)) 0;
-    }
-}
