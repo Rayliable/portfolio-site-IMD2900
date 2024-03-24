@@ -60,6 +60,7 @@ def illustration(request):
     filtered_images_url = UserUploadURL.objects.filter(tags='option_two', privacy='option_one')
     return render(request, 'illustration.html', {'images': filtered_images, 'url_images': filtered_images_url})
 
+
 def accpieces_view(request):  # home page of site
     return render(request, "acc-viewpieces.html")
 
