@@ -1,0 +1,27 @@
+{% extends "nav-bar.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="/static/style/LoginStyle.css">
+    <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
+    <main>
+        <div class="left">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">
+                        <h2>Welcome back!</h2>
+                    </legend>
+                    {{ form.as_p }}
+                </fieldset>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Log In</button>
+                </div>
+            </form>
+        </div>
+        <div class="right">
+            <h2>New here?</h2>
+            <a class="ml-2" href="{% url 'register' %}"><button class="btn btn-success">Make an Account!</button></a>
+        </div>
+    </main>
+{% endblock %}

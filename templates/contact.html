@@ -5,8 +5,71 @@
 {% endblock %}
 
 {% block content %}
-<head>
-    <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
-    <title>Contact Us</title>
-</head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
+        <link rel="stylesheet" type="text/css" href="/static/style/contactStyle.css">
+
+        <title>About Us</title>
+    </head>
+    <body>
+    <div class="Contact">
+        <h3>Reach out and get in touch!</h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Sed enim ut sem viverra aliquet eget sit. Odio
+            euismod lacinia at quis risus sed vulputate odio ut. Faucibus scelerisque eleifend
+            donec pretium vulputate sapien nec sagittis. Venenatis cras sed felis eget velit aliquet.
+            Lectus sit amet est placerat. Rhoncus mattis rhoncus urna neque. In metus vulputate eu
+            scelerisque felis imperdiet. Quisque egestas diam in arcu. Ac auctor augue mauris augue neque
+        </p>
+    </div>
+    <div class="FAQ">
+        <div class="Question">
+            <div class="QInfo">
+                <h3> QUESTION </h3>
+                <h4> ANSWER </h4>
+            </div>
+        </div>
+        <div class="Question">
+            <div class="QInfo">
+                <h3> QUESTION </h3>
+                <h4> ANSWER </h4>
+            </div>
+        </div>
+                <div class="Question">
+            <div class="QInfo">
+                <h3> QUESTION </h3>
+                <h4> ANSWER </h4>
+            </div>
+        </div>
+        <div class="Question">
+            <div class="QInfo">
+                <h3> QUESTION </h3>
+                <h4> ANSWER </h4>
+            </div>
+        </div>
+                <div class="Question">
+            <div class="QInfo">
+                <h3> QUESTION </h3>
+                <h4> ANSWER </h4>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contact-form">
+        <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">
+                <h2>Send us a message!</h2>
+            </legend>
+            {{ form.as_p }}
+        </fieldset>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Send</button>
+        </div>
+    </form>
+    </div>
+    
+    </body>
+
 {% endblock %}

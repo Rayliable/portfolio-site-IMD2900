@@ -1,5 +1,8 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
-from .forms import ImageForm, ImageFormURL
+import os, csv
+from portfolio_site_IMD2900.settings import BASE_DIR
+from .forms import ImageForm, ImageFormURL, ContactForm
 from .models import UserUpload, UserUploadURL
 
 
@@ -14,8 +17,29 @@ def about(request):  # about page of site
     return render(request, "about.html")
 
 
-def contact(request):  # contact page of site
-    return render(request, "contact.html")
+def contact(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            #Do something here!!!!
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+
+            file_path = os.path.join(BASE_DIR, 'responses.csv')
+            f = open(file_path, "a")
+            writer = csv.writer(f)
+            writer.writerow([name, email, subject, message])
+            f.close()
+
+            messages.success(request, f'Thank you for your message, {name}!')
+            return redirect('contact_us')
+        else:
+            messages.warning(request, f"Sorry, something about that wasn't right. Please try again.")
+    else:
+        form = ContactForm()
+    return render(request, 'contact.html', {'form': form})
 
 
 def upload_view(request):  # view for the upload form
@@ -50,13 +74,15 @@ def url_upload(request):  # page for users to upload images
 def photography(request):
     # Filter through images based on tag and privacy
     filtered_images = UserUpload.objects.filter(tags='option_two', privacy='option_one')
-    return render(request, 'photography.html', {'images': filtered_images})
+    filtered_images_url = UserUploadURL.objects.filter(tags='option_two', privacy='option_one')
+    return render(request, 'photography.html', {'images': filtered_images, 'url_images': filtered_images_url})
 
 
 def illustration(request):
     # Filter through images based on tag and privacy
     filtered_images = UserUpload.objects.filter(tags='option_three', privacy='option_one')
-    return render(request, 'illustration.html', {'images': filtered_images})
+    filtered_images_url = UserUploadURL.objects.filter(tags='option_two', privacy='option_one')
+    return render(request, 'illustration.html', {'images': filtered_images, 'url_images': filtered_images_url})
 
 
 def accpieces_view(request):  # home page of site

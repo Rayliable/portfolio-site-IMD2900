@@ -58,6 +58,7 @@ main {
     margin-top: 2%;
     margin-left: 5%;
     padding: 17px;
+    margin-bottom: 2.4%;
 }
 
 main .line {
@@ -74,8 +75,10 @@ main .left {
     position: relative;
     text-align: left;
     /*background-color: #1c1c1c;*/
-    width: 45%;
-
+    width: 100%;
+    background-color: #2ca6a4;
+    padding: 5% 7%;
+    border-radius: 75px;
 }
 
 main .left h2 {
@@ -94,7 +97,7 @@ main .left form input {
     height: 38px;
     width: 100%;
     border: 2px solid #CCF5AC;
-    background-color: #02C4B5;
+    background-color: #ffffff;
     margin-bottom: 18px;
     display: block;
     font-size: 18px;
@@ -103,7 +106,16 @@ main .left form input {
 main .left form input[type="checkbox"] {
     width: 30px;
     height: 30px;
+}
 
+main .left form textarea {
+    width: 100%;
+    border: 2px solid #CCF5AC;
+    background-color: #ffffff;
+    margin-bottom: 18px;
+    display: block;
+    font-size: 18px;
+    outline: none;
 }
 
 main .left form button {
@@ -124,9 +136,12 @@ main .right {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 100px;
-    margin-right: 0%;/*ngl didnt know how to center it naturally */
+    margin-top: 1%;
+    margin-right: 2%;/*ngl didnt know how to center it naturally */
     margin-left: 10%;
+    background-color: #2ca6a4;
+    padding: 7% 7%;
+    border-radius: 75px;
 }
 
 main .right h2 {
@@ -150,14 +165,66 @@ main .right .images img {
 }
 
 main .right button {
-    width: 100%;
     border-radius: 40px;
-    border: none;
-    height: 50px;
-    background-color: #CCF5AC;
-    color: #1c1c1c;
+    width: 100%;
+    height: 64px;
+    background-color: #1c1c1c;
+    color: #FFFFFF;
     font-family: Rockwell, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 30px;
-    margin-top: 100px;
+    font-size: 31px;
+    margin-top: 10px;
+    border: none; /*default border did kinda look cool tho */
 }
 
+.register-form {
+    background-color: #2ca6a4;
+    width: 90%;
+    margin: 5%;
+    padding: 2%;
+    border-radius: 50px;
+}
+
+.register-form h2 {
+    color: #EFFFC8;
+    justify-content: center;
+    margin-left: 40%;;
+}
+
+.register-form form input{
+    height: 38px;
+    width: 100%;
+    border: 2px solid #CCF5AC;
+    background-color: #ffffff;
+    margin-bottom: 18px;
+    display: block;
+    font-size: 18px;
+    outline: none;
+}
+
+.register-form form textarea {
+    width: 100%;
+    border: 2px solid #CCF5AC;
+    background-color: #ffffff;
+    margin-bottom: 18px;
+    display: block;
+    font-size: 18px;
+    outline: none;
+}
+
+.register-form form label {
+    color: #1c1c1c;
+    font-family: Rockwell, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 19px;
+}
+
+.register-form form button {
+    border-radius: 40px;
+    width: 100%;
+    height: 64px;
+    background-color: #1c1c1c;
+    color: #FFFFFF;
+    font-family: Rockwell, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 31px;
+    margin-top: 10px;
+    border: none; /*default border did kinda look cool tho */
+}
