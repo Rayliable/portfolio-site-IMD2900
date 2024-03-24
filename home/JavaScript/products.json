@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "name":"Art Title",
+        "Media":"Artist Name",
+        "image": "/Media/ImgTemp/1.png",
+        "description":"Descriptions:"
+    },
+    {
+        "id": 2,
+        "name":"Art Title",
+        "Media":"Artist Name",
+        "image": "/Media/ImgTemp/2.png",
+        "description":"Descriptions:"
+    },
+    {
+        "id": 3,
+        "name":"Art Title",
+        "Media":"Artist Name",
+        "image": "/Media/ImgTemp/3.png",
+        "description": "Descriptions:"
+    },
+    {
+        "id": 4,
+        "name":"Art Title",
+        "Media":"Artist Name",
+        "image": "/Media/ImgTemp/4.png",
+        "description":"Descriptions:"
+    },
+    {
+        "id": 5,
+        "name":"Art Title",
+        "Media":"Artist Name",
+        "image": "/Media/ImgTemp/5.png",
+        "description": "Description :Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"
+    },
+    {
+        "id": 6,
+        "name":"Art Title",
+        "Media":"Artist Name",
+        "image": "/Media/ImgTemp/6.png",
+        "description":"Description:Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"
+    },
+    {
+        "id": 7,
+        "name":"Art Title",
+        "Media":"Artist Name",
+        "image": "/Media/ImgTemp/7.png",
+        "description": "Descriptions:"
+    },
+    {
+        "id": 8,
+        "name":"Art Title",
+        "Media":"Artist Name",
+        "image": "/Media/ImgTemp/8.png",
+        "description": "Description:Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"
+    }
+
+]

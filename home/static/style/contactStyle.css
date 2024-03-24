@@ -1,0 +1,31 @@
+h3 {
+    font-size: 45px;
+    text-align: center
+}
+
+h4 {
+    font-size: 20px;
+    text-align: center
+}
+
+.FAQ {
+    padding: 2%;
+    text-align: center;
+    display: flex;
+}
+
+.Contact {
+    background-color: #1c1c1c;
+    padding: 5%;
+    color: #EFFFC8;
+    text-align: center;
+}
+
+.Question {
+    border-radius: 75px;
+    display: flex;
+    justify-content: center;
+    background-color: #2ca6a4;
+    padding: 2%;
+    margin: 2%;
+}

@@ -1,0 +1,528 @@
+body {
+    margin: 0;
+    font-family: Rockwell, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #7EC4B5; /* Background color for the body */
+}
+
+header {
+    background-color: #2B2525; /* Background color for the header */
+    padding: 10px ; /* Padding for the header */
+    color: #fff; /* Text color for the header */
+}
+
+.container {
+    width: 90%; /* Width of the container */
+
+}
+.container4 {
+    padding: 4% 9%;
+
+}
+
+
+nav {
+    display: flex;
+    padding-left: 240px; /* Adjust as needed */
+    font-size: large;
+}
+
+.logo{
+    max-width: 200px; /* Maximum width for the logo */
+    margin-right: auto; /* Push the logo to the left */
+    margin-left: -190px;
+}
+nav ul {
+
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+
+    display: inline-block;
+    margin:  10px; /* Adjust margin as needed */
+}
+
+nav ul li a {
+
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+nav ul li a::after{
+
+    content: '';
+    width: 0;
+    height: 3px;
+    background:  #EFFFC8;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+.header-text{
+
+    margin-top: 25%;
+    font-size: 25px;
+
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+
+}
+.header-text h1 span{
+    color: #2B2525;
+
+}
+
+
+
+/*/--------------rest --------/*/
+.title{
+    font-size: large;
+    padding: 10px 0;
+    color:#ffffff;
+}
+
+/* ===== =====>>  Body Font Size  <<===== =====  */
+html {
+  font-size: 10px;
+}
+
+/* ===== =====>> Css Variables  <<===== =====  */
+:root {
+  /* =====>>  Font Color  <<===== */
+  --f1-color: #fff;
+  --f2-color: #000;
+  --f3-color: rgba(0, 0, 0, 0.8);
+  --f4-color: rgba(0, 0, 0, 0.6);
+  --f5-color: #0099cc;
+  --f6-color: #000000;
+
+  /* =====>>  Background Color  <<===== */
+  --bg1-color: #fff;
+  --bg2-color: #000;
+  --bg3-color: #33ccff;
+  --bg4-color: #33cc33;
+  --bg5-color: #0099cc;
+  --bg6-color: rgba(0, 0, 0, 0.4);
+  --bg7-color: rgba(0, 0, 0, 0.2);
+  --glass-bg: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.3)
+  );
+  --C-lg-bg: linear-gradient(45deg, #ff3399, #ff9933);
+
+  /* ===== =====>>  Font Size  <<===== =====  */
+  --xxxl-fs: 2.2rem;
+  --xxl-fs: 1.8rem;
+  --xl-fs: 1.6rem;
+  --l-fs: 1.4rem;
+  --m-fs: 1.2rem;
+  --s-fs: 1.1rem;
+  --xs-fs: 1rem;
+
+  /* =====>>  Margin  <<===== */
+  --m-2-5: 2.5rem;
+  --m-1-8: 1.8rem;
+  --m-1-5: 1.5rem;
+  --m-0-6: 0.6rem;
+  --m-0-5: 0.5rem;
+  --m-0-3: 0.3rem;
+
+  /* =====>>  Padding  <<===== */
+  --p-2-5: 2.5rem;
+  --p-1-5: 1.5rem;
+  --p-1-0: 1rem;
+  --p-0-8: 0.8rem;
+  --p-0-5: 0.5rem;
+  --p-0-4: 0.4rem;
+  --p-0-3: 0.3rem;
+}
+
+/* ===== =====>>  Body Main-Background Css  <<===== =====  */
+header {
+  grid-area: header;
+}
+
+/* ===== =====>>  Main-Container Css  <<===== =====  */
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "header header"
+    "userProfile userDetails"
+    "Gallery timeline_about"
+   ;
+  width: 100%;
+  height: 100vh;
+
+  padding: var(--p-1-5);
+  padding-left:25px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== =====>>  Container Cards Grid-Area Css Start  <<===== =====  */
+
+
+.userProfile {
+  grid-area: userProfile;
+}
+
+.Gallery {
+  grid-area: Gallery;
+}
+
+
+/* ===== =====>>  Container Cards Css  <<===== =====  */
+
+
+.Gallery .Info .secondary span{
+    position: absolute;
+    top: 205px;
+    right: 0.6rem;
+    font-weight: 700;
+    font-size: var(--s-fs);
+    color: var(--f5-color);
+    background: #e6f2ff;
+    color: #000;
+    padding: var(--p-0-4) var(--p-1-0);
+    border-radius: 0.4rem;
+  }
+
+  .Gallery .Info .edit1 span{
+    position: absolute;
+    top: 8px;
+    right: 1rem;
+    font-weight: 700;
+    font-size: var(--s-fs);
+    color: var(--f5-color);
+    background: #c7efeb;
+    color: #000;
+    padding: var(--p-0-4) var(--p-1-0);
+    border-radius: 0.4rem;
+  }
+  .Gallery .Info .edit2 span{
+    position: absolute;
+    top: -26px;
+    right: 18rem;
+    font-weight: 700;
+    font-size: var(--s-fs);
+    color: var(--f5-color);
+    background: var(--glass-bg);
+    background: #c7efeb;
+    color: #000;
+    padding: var(--p-0-4) var(--p-1-0);
+    border-radius: 0.4rem;
+  }
+
+
+.container .card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(0rem);
+  border-radius: 1.5rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  padding: var(--p-1-5);
+  margin-top: 15px;
+}
+
+
+/* ===== =====>>  User Main-Profile Css Start  <<===== ===== */
+
+.container .userProfile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background: none;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+.container2 .banner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0px;
+    background: none;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+
+.container .userProfile .profile figure img {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+}
+.container .banner .banner figure img {
+    width: 38rem;
+    height: 17rem;
+
+  }
+
+/* ===== =====>>  .Gallery .Info Css Start  <<===== ===== */
+
+.Gallery .Info .heading,
+.Gallery .skills .heading {
+  position: relative;
+  font-size: var(--xs-fs);
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  margin-bottom: var(--m-1-5);
+
+  text-align: center;
+}
+
+.Gallery .Info .heading::before,
+.Gallery .skills .heading::before {
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 0.1rem;
+  width: 88%;
+  background: var(--bg6-color);
+}
+
+.Gallery .Info .primary,
+.Gallery .Info .secondary {
+  position: relative;
+}
+
+.Gallery .Info .primary h1,
+.Gallery .Info .secondary h1 {
+  font-size: var(--l-fs);
+  color: var(--f3-color);
+  margin-bottom: var(--m-0-6);
+}
+
+.Gallery .Info .primary span {
+  position: absolute;
+  top: 0;
+  right: -0.5rem;
+  font-weight: 700;
+  font-size: var(--s-fs);
+  color: var(--f5-color);
+  background: #c7efeb;
+  color: #000;
+  padding: var(--p-0-4) var(--p-1-0);
+  border-radius: 0.4rem;
+}
+
+
+.Gallery .Info .primary p,
+.Gallery .Info .secondary p {
+  margin-bottom: var(--m-1-8);
+  font-size: var(--m-fs);
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.6rem;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Roboto;
+
+}
+
+:root {
+	--blue:  #7EC4B5;
+	--light-blue: #ffffff;
+	--dark-blue: #eff6ff;
+	--grey: #ffffff;
+}
+
+.boody {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+.container2 {
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    background: #7EC4B5;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%; /* Adjust top position as needed */
+    transform: translateY(-100%); /* Center vertically */
+    right: 0px;
+    left:550px; /* Adjust the distance from the right side of the screen */
+}
+
+
+
+
+.img-area {
+    
+	position: relative;
+	width: 100%;
+	height: 150px;
+	background: var(--grey);
+	margin-bottom: 30px;
+	border-radius: 5px;
+	overflow: hidden;
+    border: solid 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.img-areas {
+    
+	position: relative;
+	width: 100%;
+	height: 150px;
+	background: var(--grey);
+	margin-bottom: 30px;
+	border-radius: 5px;
+    border: solid 1px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.img-area3 {
+    
+	position: relative;
+	width: 155px;
+	height: 150px;
+	background: var(--grey);
+	margin-bottom: 1000px;
+	border-radius: 5px;
+    border: solid 1px;
+	overflow: hidden;
+    position: absolute;
+    top: 106%; /* Adjust top position as needed */
+    transform: translateY(-100%); /* Center vertically */
+    right: 0px;
+    left:220px;
+}
+
+.img-area4 {
+    
+	position: relative;
+	width: 155px;
+	height: 150px;
+	background: var(--grey);
+	margin-bottom: 1000px;
+	border-radius: 5px;
+	overflow: hidden;
+    position: absolute;
+    border: solid 1px;
+    top: 196%; /* Adjust top position as needed */
+    transform: translateY(-100%); /* Center vertically */
+    right: 0px;
+    left:220px;
+}
+
+.img-area h3 {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 6px;
+    color: #7EC4B5;
+    
+}
+.img-area p {
+	color:  #7EC4B5;
+}
+.img-area p span {
+	font-weight: 600;
+}
+.img-area img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	z-index: 100;
+}
+.img-area::before {
+	content: attr(data-img);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:  #7EC4B5;
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	opacity: 0;
+	transition: all .3s ease;
+	z-index: 200;
+}
+.img-area.active:hover::before {
+	opacity: 0.8;
+}
+.select-image {
+	display: block;
+	width: 70%;
+    margin-top: 100px;
+	padding: 8px 0;
+	border-radius: 15px;
+	background: var(--blue);
+	color: #fff;
+
+	font-size: 13px;
+	border: none;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+.select-images {
+	display: block;
+	width: 95%;
+    margin-top: -10px;
+    margin-left:480px;
+	padding: 15px 0;
+	border-radius: 15px;
+	background: #CCF5AC;
+	color: #000000;
+	font-size: 18px;
+	border: solid 1px;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+.select-image3 {
+	display: block;
+	width: 70%;
+    margin-top: 110px;
+    margin-left:25px;
+	padding: 8px 0;
+	border-radius: 15px;
+	background: var(--blue);
+	color: #fff;
+	font-size: 13px;
+	border: none;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+
+.select-image:hover {
+	background:  #7EC4B5;
+    
+}

@@ -1,0 +1,110 @@
+{% extends "nav-bar.html" %}
+{% load static %}
+{% block title %}
+    Portfolio App
+{% endblock %}
+
+{% block content %}
+
+
+<head>
+    <title>Account</title>
+
+    <!-- ===== ===== Custom Css ===== ===== -->
+    <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
+    <link rel="stylesheet" href="/static/style/AccountStyle.css">
+
+    <!-- ===== ===== Remix Font Icons Cdn ===== ===== -->
+
+</head>
+
+<body>
+    <!-- ===== ===== Body Main-Background ===== ===== -->
+    <span class="main_bg"></span>
+
+
+    <!-- ===== ===== Main-Container ===== ===== -->
+    <div class="container">
+
+        <!-- ===== ===== User Main-Profile ===== ===== -->
+        <section class="userProfile card">
+            <div class="profile">
+                <figure><img src="/Media/ImgTemp/profile.png" alt="profile" width="250px" height="250px"></figure>
+            </div>
+        </section>
+
+
+        <!-- ===== ===== Gallery Section ===== ===== -->
+        <section class="Gallery card">
+            <div class="container2">
+                <div class="title">Your Gallery</div>
+
+                <div class="img-area" data-img="">
+
+                    <button class="select-image">Select Image</button>
+                    <p></p>
+                </div>
+
+
+
+                <div class="img-area4" data-img="">
+
+                    <button class="select-image3">Select Image</button>
+                    <p></p>
+                </div>
+
+                <div class="img-areas" data-img="">
+
+                    <button class="select-image">Select Image</button>
+                    <p></p>
+                </div>
+
+
+                <div class="img-area3" data-img="">
+
+                    <button class="select-image3">Select Image</button>
+                    <p></p>
+                </div>
+
+                <button class="select-images">Save Changes</button>
+
+
+
+        </div>
+
+            <!-- ===== ===== Work Container ===== ===== -->
+            <div class="Info">
+                <h1 class="heading">UserName</h1>
+                <div class="primary">
+                    <h1>Bio</h1>
+                    <span>Edit</span>
+                    <p>Tell us a little about yourself! <br></p>
+                </div>
+
+                <div class="secondary">
+                    <h1>Banner <br> </h1>
+                    <span>Edit</span>
+
+                </div>
+
+                <div class="edit1">
+                    <span>Edit</span>
+
+                    <div class="edit2">
+                        <span>Edit</span>
+            </div>
+            <div class="container1">
+            <!-- ===== ===== Skills Contaienr ===== ===== -->
+            <section class="banner card">
+                <div class="banner">
+                    <figure><img src="/Media/ImgTemp/rec1.png" alt="banner" width="250px" height="250px"></figure>
+
+                </div>
+            </section>
+            </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+{% endblock %}

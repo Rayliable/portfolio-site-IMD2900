@@ -52,3 +52,6 @@ coverage.xml
 docs/_build/
 .idea/portfolio-site-IMD2900.iml
 db.sqlite3
+home/__pycache__/models.cpython-39.pyc
+home/__pycache__/urls.cpython-39.pyc
+home/__pycache__/views.cpython-39.pyc

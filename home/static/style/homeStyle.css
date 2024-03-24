@@ -1,13 +1,3 @@
-body {
-    background-color: #efffc8;
-
-
-}
-
-.categories {
-
-}
-
 .categoryDisplay {
     margin: 5%;
     display: grid;
@@ -18,7 +8,7 @@ body {
 }
 
 .categoryimg {
-    width: 90%;
+    width: 100%;
     padding: 20px;
     height: auto;
 }
@@ -27,11 +17,28 @@ body {
     background-color: #1c1c1c;
     padding: 50px;
     color: #efffc8;
-/*Still in progress*/
-.roboto-slab-<homeWelcome> {
-  font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
 }
+
+.About {
+    background-color: #1c1c1c;
+    padding: 50px;
+    color: #efffc8;
+    text-align: center;
+    width: 50%;
+    margin: 50px auto;
+    border-radius: 75px;
+}
+
+.About button {
+    border-radius: 40px;
+    width: 100%;
+    height: 64px;
+    background-color: #1c1c1c;
+    color: #FFFFFF;
+    font-size: 31px;
+    margin-top: 10px;
+}
+
+.About button:hover {
+    background-color: #333333;
 }

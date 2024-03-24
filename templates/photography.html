@@ -1,13 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title> Photography </title>
-</head>
-<body>
-    <h1> Photography </h1>
-    {% for image in images %}  <!-- prints out all images -->
-        <img src="{{ image.image_compressed.url }}" alt="Image" style="width: 250px; height: 250px">
-    {% endfor %}
-</body>
-</html>
+{% extends "nav-bar.html" %}
+{% load static %}
+{% block title %}
+    Tag: Photography - Portfol.io
+{% endblock %}
+
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <title> Photography </title>
+        <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
+        <link rel="stylesheet" type="text/css" href="static/style/generalTagStyle.css">
+    </head>
+    <body>
+    <div class="tagHeader">
+        <h4 style="font-size: 20px; text-align: center"> Current Tag: </h4>
+        <h3 style="font-size: 45px; text-align: center"> PHOTOGRAPHY </h3>
+    </div>
+    <div class="imageDisplay">
+        {% for image in images %}  <!-- prints out all images -->
+            {% if image.image_compressed %} <!-- makes sure one exists -->
+                <img src="{{ image.image_compressed.url }}" alt="Image">
+            {% endif %}
+        {% endfor %}
+        {% for image in url_images %}  <!-- prints out all images -->
+            {% if image.url_upload %} <!-- makes sure one exists -->
+                <img src="{{ image.url_upload }}" alt="Image">
+            {% endif %}
+        {% endfor %}
+    </div>
+    </body>
+{% endblock %}

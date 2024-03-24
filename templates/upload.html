@@ -1,10 +1,13 @@
 {% extends "nav-bar.html" %}
 {% load static %}
-
 <!-- Used tutorial https://www.youtube.com/watch?v=Ev5xgwndmfc&ab_channel=TechWithTim, minus bootstrapping part -->
-{% block title %} Upload Images - Portfol.io{% endblock %}
+{% block title %}
+    Upload Images - Portfol.io
+{% endblock %}
 
 {% block content %}
+    <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
+    <link rel="stylesheet" type="text/css" href="static/style/UploadStyle.css">
     <h1> Upload Image File </h1> <!-- upload image form -->
         <form action="{% url 'image_upload' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %} <!-- form syntax -->
