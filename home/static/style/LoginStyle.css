@@ -75,7 +75,7 @@ main .left {
     position: relative;
     text-align: left;
     /*background-color: #1c1c1c;*/
-    width: 100%;
+    width: 45%;
     background-color: #2ca6a4;
     padding: 5% 7%;
     border-radius: 75px;
@@ -97,7 +97,7 @@ main .left form input {
     height: 38px;
     width: 100%;
     border: 2px solid #CCF5AC;
-    background-color: #ffffff;
+    background-color: #02C4B5;
     margin-bottom: 18px;
     display: block;
     font-size: 18px;
@@ -106,16 +106,7 @@ main .left form input {
 main .left form input[type="checkbox"] {
     width: 30px;
     height: 30px;
-}
 
-main .left form textarea {
-    width: 100%;
-    border: 2px solid #CCF5AC;
-    background-color: #ffffff;
-    margin-bottom: 18px;
-    display: block;
-    font-size: 18px;
-    outline: none;
 }
 
 main .left form button {
@@ -176,7 +167,7 @@ main .right button {
     border: none; /*default border did kinda look cool tho */
 }
 
-.register-form {
+.login-form {
     background-color: #2ca6a4;
     width: 90%;
     margin: 5%;
@@ -184,13 +175,13 @@ main .right button {
     border-radius: 50px;
 }
 
-.register-form h2 {
+.login-form h2 {
     color: #EFFFC8;
     justify-content: center;
     margin-left: 40%;;
 }
 
-.register-form form input{
+.login-form form input{
     height: 38px;
     width: 100%;
     border: 2px solid #CCF5AC;
@@ -201,7 +192,7 @@ main .right button {
     outline: none;
 }
 
-.register-form form textarea {
+.login-form form textarea {
     width: 100%;
     border: 2px solid #CCF5AC;
     background-color: #ffffff;
@@ -211,13 +202,13 @@ main .right button {
     outline: none;
 }
 
-.register-form form label {
+.login-form form label {
     color: #1c1c1c;
     font-family: Rockwell, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 19px;
 }
 
-.register-form form button {
+.login-form form button {
     border-radius: 40px;
     width: 100%;
     height: 64px;
