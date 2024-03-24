@@ -1,7 +1,7 @@
 import sys
+from PIL.Image import Image
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
-from PIL import Image
 from io import BytesIO
 from django.contrib.auth.models import User
 
