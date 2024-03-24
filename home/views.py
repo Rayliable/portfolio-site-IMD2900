@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import ImageForm, ImageFormURL
 from .models import UserUpload, UserUploadURL
 
+
 # Create your views here.
 
 
@@ -9,11 +10,11 @@ def home(request):  # home page of site
     return render(request, "home.html")
 
 
-def about(request):  # home page of site
+def about(request):  # about page of site
     return render(request, "about.html")
 
 
-def contact(request):  # home page of site
+def contact(request):  # contact page of site
     return render(request, "contact.html")
 
 
@@ -49,10 +50,31 @@ def url_upload(request):  # page for users to upload images
 def photography(request):
     # Filter through images based on tag and privacy
     filtered_images = UserUpload.objects.filter(tags='option_two', privacy='option_one')
-    return render(request, 'photography.html', {'images': filtered_images})
+    filtered_images_url = UserUploadURL.objects.filter(tags='option_two', privacy='option_one')
+    return render(request, 'photography.html', {'images': filtered_images, 'url_images': filtered_images_url})
 
 
 def illustration(request):
     # Filter through images based on tag and privacy
     filtered_images = UserUpload.objects.filter(tags='option_three', privacy='option_one')
-    return render(request, 'illustration.html', {'images': filtered_images})
+    filtered_images_url = UserUploadURL.objects.filter(tags='option_two', privacy='option_one')
+    return render(request, 'illustration.html', {'images': filtered_images, 'url_images': filtered_images_url})
+
+def accpieces_view(request):  # home page of site
+    return render(request, "acc-viewpieces.html")
+
+
+def viewart_view(request):  # home page of site
+    return render(request, "ViewArtPage.html")
+
+
+def extra_view(request):  # home page of site
+    return render(request, "Extra.html")
+
+
+def detail_view(request):  # home page of site
+    return render(request, "detail.html")
+
+
+def SignIn_view(request):  # home page of site
+    return render(request, "register/SignIn.html")

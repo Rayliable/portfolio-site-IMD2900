@@ -4,8 +4,6 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" ></script>
 
     <div class="homeWelcome">
         <h3 style="font-size: 45px; text-align: center"> WELCOME! </h3>
@@ -35,7 +33,7 @@
         </div>
     </div>
     <!-- little about us section -->
-    <div style="text-align: center; width: 50%; margin-top: 30px; margin-left: auto; margin-right: auto">
+    <div class="About">
         <h4 style="font-size: 30px"> About Us </h4>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua. Sed enim ut sem viverra aliquet eget sit. Odio
@@ -45,11 +43,11 @@
             scelerisque felis imperdiet. Quisque egestas diam in arcu. Ac auctor augue mauris augue neque
         </p>
 
-        <a href="#">
-            <button> About Us </button>
-        </a>
+            <a href="/about_us"><button> About Us!</button>
+            </a>
     </div>
-<link rel="stylesheet" type="text/css" href="static/style/homeStyle.css">
+    <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
+    <link rel="stylesheet" type="text/css" href="/static/style/homeStyle.css">
 
 {% endblock %}
 

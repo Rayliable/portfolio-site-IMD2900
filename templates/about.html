@@ -1,11 +1,69 @@
 {% extends "nav-bar.html" %}
 {% load static %}
 {% block title %}
-    <!-- Title here! -->
     About Us - Portfol.io
 {% endblock %}
 
 {% block content %}
-    <!-- Content here! -->
-    <link rel="stylesheet" type="text/css" href="static/style/homeStyle.css">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
+        <link rel="stylesheet" type="text/css" href="/static/style/aboutStyle.css">
+
+        <title>About Us</title>
+    </head>
+    <body>
+    <div class="AboutGroup">
+        <h3>About Us at 2CupWater1CupRice!</h3>
+        <p> By the end of the IMD 2900 course, our portfolio site will support the display of images, including
+            uploaded and linked content, under an easy-to-use and navigate tagging system to become the leading choice
+            for creatives seeking a single website to organise and share their creative works.
+        </p>
+    </div>
+    <div class="AboutAll">
+        <div class="AboutL">
+            <img id="pfpimg" src="{% static 'DanIcon.png' %}" alt="TeamMemberImg" class="TeamMemberImg">
+            <div class="infoLeft">
+                <h3> Daniel Gagne </h3>
+                <h4> Back-End Programmer </h4>
+            </div>
+        </div>
+        <div class="AboutR">
+            <div class="infoRight">
+                <h3> Rowan Moore </h3>
+                <h4> Logo Artist, Front-End Programmer, Wireframe Design </h4>
+            </div>
+            <img id="pfpimg" src="{% static 'RowanIcon.png' %}" alt="TeamMemberImg" class="TeamMemberImg">
+        </div>
+        <div class="AboutL">
+            <img id="pfpimg" src="{% static 'SetaishIcon.png' %}" alt="TeamMemberImg" class="TeamMemberImg">
+            <div class="infoLeft">
+                <h3> Setaish Qayomi </h3>
+                <h4> Scrum Master, Front-End Programmer, Wireframe Design </h4>
+            </div>
+        </div>
+        <div class="AboutR">
+            <div class="infoRight">
+                <h3> Chloe Raymond </h3>
+                <h4> Front-End Programmer, Wireframe Design, Artist </h4>
+            </div>
+            <img id="pfpimg" src="{% static 'ChloeIcon.png' %}" alt="TeamMemberImg" class="TeamMemberImg">
+        </div>
+        <div class="AboutL">
+            <img id="pfpimg" src="{% static 'RayIcon.png' %}" alt="TeamMemberImg" class="TeamMemberImg">
+            <div class="infoLeft">
+                <h3> Ray Rose </h3>
+                <h4> Product Owner, Back-End Programmer </h4>
+            </div>
+        </div>
+        <div class="HelpLink">
+            <h3> Need Help? </h3>
+            <h4>
+                Feel free to reach out to us if you have any questions or concerns!
+            </h4>
+            <a class ="HelpLinkButton" href="/contact_us"><button> Contact Us!</button>
+            </a>
+        </div>
+    </div>
+    </body>
+
 {% endblock %}

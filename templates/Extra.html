@@ -1,0 +1,57 @@
+{% extends "nav-bar.html" %}
+{% load static %}
+{% block title %}
+    Portfolio App
+{% endblock %}
+
+{% block content %}
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
+    <link rel="stylesheet" href="/static/style/Gallerystyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">PRODUCT LIST</div>
+        <div class="listProduct">
+
+        </div>
+    </div>
+
+    
+
+    <script>
+       
+        let products = null;
+        
+        fetch('products.json')
+            .then(response => response.json())
+            .then(data => {
+                products = data;
+                addDataToHTML();
+        })
+
+        function addDataToHTML(){
+    
+        let listProductHTML = document.querySelector('.listProduct');
+
+        
+        if(products != null) 
+        {
+            products.forEach(product => {
+                let newProduct = document.createElement('a');
+                newProduct.href = '/ViewArtPage.html?id=' + product.id;
+                newProduct.classList.add('item');
+                newProduct.innerHTML = 
+                `<img src="${product.image}" alt="">
+                <h2>${product.name}</h2>
+                <div class="Media">${product.Media}</div>`;
+                listProductHTML.appendChild(newProduct);
+
+            });
+        }
+    }
+
+    </script>
+</body>
+{% endblock %}
