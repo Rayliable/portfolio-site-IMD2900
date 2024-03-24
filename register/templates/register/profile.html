@@ -1,14 +1,31 @@
+<!-- This file should be removed or changed when the real account art view page is created!-->
 {% extends "nav-bar.html" %}
 {% load static %}
-{% block title %}Profile{% endblock %}
+{% block title %}
+    Account Art View - Portfolio App
+{% endblock %}
 
 {% block content %}
-    <h1>Profile: {{ user.profile.display_name }}</h1>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" ></script>
 
-    <img src="{{ user.profile.image.url }}" width=200 height=200 alt="profile picture">
-    
-    <h2>Username: {{ user.username }}</h2>
-    <h2>Email: {{ user.email }}</h2>
-    <h2>Bio: {{ user.profile.bio }}</h2>
+    <div class="tagHeader">
+        <img id="pfpimg" src="{{ user.profile.image.url }}" alt="ProfileImg" class="ProfileIcon" style="border-radius: 100px;">
+        <h3 style="font-size: 45px; text-align: center"> {{ user.username }} </h3>
+        <h4 style="font-size: 20px; text-align: center"> {{ user.profile.bio }} </h4>
+    </div>
+    <!-- Scroll line for categories -->
+    <div class="categories">
+        <div class="categoryDisplay">
+        {% for image in images %}  <!-- prints out all images -->
+            <img src="{{ image.image_compressed.url }}" alt="Image" style="width: 250px; height: 250px">
+        {% endfor %}
+        </div>
+    </div>
+<link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
+<link rel="stylesheet" type="text/css" href="static/style/accViewStyle.css">
 
 {% endblock %}
+
+
+
