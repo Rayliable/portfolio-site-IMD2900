@@ -10,6 +10,7 @@ import requests
 
 
 class ImageForm(forms.ModelForm):  # upload form for file image
+
     class Meta:
         model = UserUpload
         fields = ['title', 'image_upload', 'tags', 'privacy']

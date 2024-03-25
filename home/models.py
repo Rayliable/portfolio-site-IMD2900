@@ -30,6 +30,7 @@ class UserUpload(models.Model):
     image_compressed = models.ImageField(upload_to='user_upload/compressed', blank=True)
     tags = models.CharField(max_length=30, choices=OPTIONS, default=untagged)
     privacy = models.CharField(max_length=30, choices=OPTIONS2, default=public)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     # code modified off of Rowan's code from BIT2008 and
     # code for saving into model modified from
@@ -80,8 +81,7 @@ class UserUploadURL(models.Model):  # user upload for URL images
     url_upload = models.URLField()
     tags = models.CharField(max_length=30, choices=OPTIONS, default=untagged)
     privacy = models.CharField(max_length=30, choices=OPTIONS2, default=public)
-
-    # uploader = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.title
