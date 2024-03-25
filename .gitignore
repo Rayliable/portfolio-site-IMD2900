@@ -54,3 +54,4 @@ docs/_build/
 home/__pycache__/models.cpython-39.pyc
 home/__pycache__/urls.cpython-39.pyc
 home/__pycache__/views.cpython-39.pyc
+db.sqlite3

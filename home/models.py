@@ -18,6 +18,9 @@ class UserUpload(models.Model):
         ('option_two', 'Photography'),
         ('option_three', 'Illustration'),
         ('option_four', 'Graphic Design'),
+        ('option_five', 'Animation'),
+        ('option_six', '3D'),
+        ('option_seven', 'Painting'),
     ]
 
     OPTIONS2 = [  # privacy options
@@ -70,6 +73,9 @@ class UserUploadURL(models.Model):  # user upload for URL images
         ('option_two', 'Photography'),
         ('option_three', 'Illustration'),
         ('option_four', 'Graphic Design'),
+        ('option_five', 'Animation'),
+        ('option_six', '3D'),
+        ('option_seven', 'Painting'),
     ]
 
     OPTIONS2 = [  # privacy options
