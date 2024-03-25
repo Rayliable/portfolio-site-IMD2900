@@ -1,5 +1,5 @@
 import sys
-from PIL.Image import Image
+from PIL import Image
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
 from io import BytesIO
@@ -42,14 +42,14 @@ class UserUpload(models.Model):
 
             # Resize and save the compressed image
             img.thumbnail((800, 800))
-            img.save(output_io, format='JPEG', quality=60)  # Save with 60% quality
+            img.save(output_io, format='PNG', quality=60)  # Save with 60% quality
             output_io.seek(0)
 
             # Save the compressed image to the compressed_image field
             self.image_compressed = InMemoryUploadedFile(
                 output_io,
-                'ImageField', '{}.jpg'.format(self.image_upload.name.split('.')[0]),
-                'image/jpeg',
+                'ImageField', '{}.png'.format(self.image_upload.name.split('.')[0]),
+                'image/png',
                 sys.getsizeof(output_io),
                 None
             )
