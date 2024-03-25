@@ -2,14 +2,14 @@
  ⚡MAKE SURE TO SUBSCRIBE PROGRAMMER CLOUD⚡
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
 body {
   width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   min-height: 100vh;
-  font-family: "Poppins", sans-serif;
+  font-family: Rockwell;
   background-color: #7EC4B5;
 }
 
@@ -27,7 +27,7 @@ a {
 
 .header__wrapper header {
   width: 100%;
-  background: url("../Media/ImgTemp/rec1.png") no-repeat 50% 20% / cover;
+  background: url("/Media/ImgTemp/rec1.png") no-repeat 50% 20% / cover;
   min-height: calc(100px + 15vw);
 
 }
@@ -74,7 +74,7 @@ a {
 .header__wrapper .cols__container .left__col .about li {
   display: flex;
   flex-direction: column;
-  color: #818181;
+  color: black;
   font-size: 0.9rem;
 }
 .header__wrapper .cols__container .left__col .about li span {
@@ -121,7 +121,7 @@ a {
 }
 .header__wrapper .cols__container .right__col nav ul li a {
   text-transform: uppercase;
-  color: #818181;
+  color: black;
 }
 .header__wrapper .cols__container .right__col nav ul li:nth-child(1) a {
   color: #1d1d1d;
