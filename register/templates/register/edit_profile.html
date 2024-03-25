@@ -2,20 +2,33 @@
 {% block title %}Edit profile{% endblock %}
 
 {% block content %}
-        <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
-<form method="POST" enctype="multipart/form-data">
+    <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
+    <link rel="stylesheet" href="/static/style/AccountStyle.css">
+    <div class="tagHeader">
+
+        <h3 style="font-size: 45px; text-align: center"> Customize Account </h3>
+
+    </div>
+    <div class="tagHeader">
+        <img id="pfpimg" src="{{ user.profile.image.url }}" alt="ProfileImg" class="ProfileIcon" style="border-radius: 100px;">
+        <h3 style="font-size: 45px; text-align: center"> {{ user.username }} </h3>
+        <h4 style="font-size: 20px; text-align: center"> {{ user.profile.bio }} </h4>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">
-                Edit your profile!
             </legend>
             {{ u_form.as_p }}
+            <img src="{{ user.profile.image.url }}" alt="" />
             {{ p_form.as_p }}
         </fieldset>
         <div class="form-group">
             <button type="submit" class="btn btn-success">Save</button>
         </div>
     </form>
+
 {% endblock %}
 
 

@@ -53,7 +53,9 @@ def image_upload(request):  # page for users to upload images
         print(request.FILES)
         form = ImageForm(request.POST, request.FILES)
         if form.is_valid:  # if form one was valid
+            form.instance.author = request.user
             form.save()
+            messages.success(request, f'Thank you for your artwork!')
         else:  # if invalid print errors
             form = ImageForm()
             form2 = ImageFormURL()
@@ -65,7 +67,9 @@ def url_upload(request):  # page for users to upload images
         print(request.FILES)
         form = ImageFormURL(request.POST)
         if form.is_valid:  # if form one was valid
+            form.instance.author = request.user
             form.save()
+            messages.success(request, f'Thank you for your artwork!')
         else:  # if invalid print errors
             form = ImageForm()
     return redirect("upload_view")  # return to form view

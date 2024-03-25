@@ -1,5 +1,5 @@
 import sys
-from PIL.Image import Image
+from PIL import Image
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
 from io import BytesIO
@@ -33,6 +33,7 @@ class UserUpload(models.Model):
     image_compressed = models.ImageField(upload_to='user_upload/compressed', blank=True)
     tags = models.CharField(max_length=30, choices=OPTIONS, default=untagged)
     privacy = models.CharField(max_length=30, choices=OPTIONS2, default=public)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     # code modified off of Rowan's code from BIT2008 and
     # code for saving into model modified from
@@ -45,14 +46,14 @@ class UserUpload(models.Model):
 
             # Resize and save the compressed image
             img.thumbnail((800, 800))
-            img.save(output_io, format='JPEG', quality=60)  # Save with 60% quality
+            img.save(output_io, format='PNG', quality=60)  # Save with 60% quality
             output_io.seek(0)
 
             # Save the compressed image to the compressed_image field
             self.image_compressed = InMemoryUploadedFile(
                 output_io,
-                'ImageField', '{}.jpg'.format(self.image_upload.name.split('.')[0]),
-                'image/jpeg',
+                'ImageField', '{}.png'.format(self.image_upload.name.split('.')[0]),
+                'image/png',
                 sys.getsizeof(output_io),
                 None
             )
@@ -86,8 +87,7 @@ class UserUploadURL(models.Model):  # user upload for URL images
     url_upload = models.URLField()
     tags = models.CharField(max_length=30, choices=OPTIONS, default=untagged)
     privacy = models.CharField(max_length=30, choices=OPTIONS2, default=public)
-
-    # uploader = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.title
