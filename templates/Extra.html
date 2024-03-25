@@ -5,53 +5,100 @@
 {% endblock %}
 
 {% block content %}
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
-    <link rel="stylesheet" href="/static/style/Gallerystyle.css">
+    <link rel="stylesheet" href="/static/style/UploadStyle.css">
+    <title>Upload Image</title>
 </head>
 <body>
-    <div class="container">
-        <div class="title">PRODUCT LIST</div>
-        <div class="listProduct">
 
+ <div class="tagHeader">
+        <h3 style="font-size: 45px; text-align: center"> Upload Art </h3>
+    </div>
+ 
+    <div class="container">
+
+        <div class="title">VIEW ARTWORK</div>
+
+        <div class="detail">
+            <div class="image">
+                <img src="" alt="Uploaded Image"> <!-- Placeholder image -->
+            </div>
+            <div class="content">
+                <h1 class="name">Artwork Title</h1>
+                <h2 class="Media">Media Type</h2>
+                <div class="buttons">
+                    <button>Check Profile</button>
+                </div>
+                <div class="description">Description of the artwork goes here.</div>
+            </div>
+        </div>
+
+        <div class="container2">
+            <input type="file" id="file" accept="image/*" hidden>
+            <div class="img-area" data-img="">
+                <i class='bx bxs-camera icon'></i>
+                <h3>Upload Image</h3>
+                <p>Image size must be less than <span>2MB</span></p>
+            </div>
+            <button class="select-image">Select Image</button>
+        </div>
+       
+
+        <div class="titles">More From This Artist</div>
+        <div class="listProduct">
+            <!-- Placeholder content for products -->
+            <a href="#" class="item">
+                <img src="/Media/ImgTemp/4.png" alt="Product 1">
+                <h2>Art 1</h2>
+                <div class="Media">Media Type</div>
+            </a>
+            <a href="#" class="item">
+                <img src="/Media/ImgTemp/7.png" alt="Product 2">
+                <h2>Art 2</h2>
+                <div class="Media">Media Type</div>
+            </a>
+           
         </div>
     </div>
 
-    
-
     <script>
-       
-        let products = null;
-        
-        fetch('products.json')
-            .then(response => response.json())
-            .then(data => {
-                products = data;
-                addDataToHTML();
+        const selectImage = document.querySelector('.select-image');
+        const inputFile = document.querySelector('#file');
+        const imgArea = document.querySelector('.img-area');
+
+        selectImage.addEventListener('click', function () {
+            inputFile.click();
         })
 
-        function addDataToHTML(){
-    
-        let listProductHTML = document.querySelector('.listProduct');
-
-        
-        if(products != null) 
-        {
-            products.forEach(product => {
-                let newProduct = document.createElement('a');
-                newProduct.href = '/ViewArtPage.html?id=' + product.id;
-                newProduct.classList.add('item');
-                newProduct.innerHTML = 
-                `<img src="${product.image}" alt="">
-                <h2>${product.name}</h2>
-                <div class="Media">${product.Media}</div>`;
-                listProductHTML.appendChild(newProduct);
-
-            });
-        }
-    }
-
+        inputFile.addEventListener('change', function () {
+            const image = this.files[0];
+            if (image.size < 2000000) {
+                const reader = new FileReader();
+                reader.onload = ()=> {
+                    const img = imgArea.querySelector('img');
+                    if (img) {
+                        img.src = reader.result;
+                    } else {
+                        const newImg = document.createElement('img');
+                        newImg.src = reader.result;
+                        imgArea.appendChild(newImg);
+                    }
+                    imgArea.classList.add('active');
+                    imgArea.dataset.img = image.name;
+                }
+                reader.readAsDataURL(image);
+            } else {
+                alert("Image size more than 2MB");
+            }
+        });
     </script>
 </body>
+</html>
+
 {% endblock %}

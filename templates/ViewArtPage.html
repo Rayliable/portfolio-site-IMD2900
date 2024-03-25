@@ -13,6 +13,9 @@
 </head>
 <body>
    
+    <div class="tagHeader">
+        <h3 style="font-size: 45px; text-align: center"> View Gallery </h3>
+    </div>
     <div class="container">
         <div class="title">VIEW ARTWORK</div>
         <div class="ViewArtPage">
@@ -33,47 +36,100 @@
         <div class="listProduct"></div>
     </div>
 
-    
-
-    <script>
-        let products = null;
-        // get datas from file json
-        fetch('products.json')
-            .then(response => response.json())
-            .then(data => {
-                products = data;
-                showViewArtPage();
-        })
-
-        function showViewArtPage(){
-            // remove datas default from HTML
-            let ViewArtPage = document.querySelector('.ViewArtPage');
-            let listProduct = document.querySelector('.titlesViewArtPage + .listProduct');
-            let productId =  new URLSearchParams(window.location.search).get('id');
-            let thisProduct = products.filter(value => value.id == productId)[0];
-            //if there is no product with id = productId => return to home page
-            if(!thisProduct){
-                window.location.href = "/";
+     <script>
+        let products = [
+            {
+                "id": 1,
+                "name": "Art Title",
+                "Media": "Artist Name",
+                "image": "/Media/ImgTemp/1.png",
+                "description": "Descriptions:"
+            },
+            {
+                "id": 2,
+                "name": "Art Title",
+                "Media": "Artist Name",
+                "image": "/Media/ImgTemp/2.png",
+                "description": "Descriptions:"
+            },
+            {
+                "id": 3,
+                "name": "Art Title",
+                "Media": "Artist Name",
+                "image": "/Media/ImgTemp/3.png",
+                "description": "Descriptions:"
+            },
+            {
+                "id": 4,
+                "name": "Art Title",
+                "Media": "Artist Name",
+                "image": "/Media/ImgTemp/4.png",
+                "description": "Descriptions:"
+            },
+            {
+                "id": 5,
+                "name": "Art Title",
+                "Media": "Artist Name",
+                "image": "/Media/ImgTemp/5.png",
+                "description": "Description: Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"
+            },
+            {
+                "id": 6,
+                "name": "Art Title",
+                "Media": "Artist Name",
+                "image": "/Media/ImgTemp/6.png",
+                "description": "Description: Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"
+            },
+            {
+                "id": 7,
+                "name": "Art Title",
+                "Media": "Artist Name",
+                "image": "/Media/ImgTemp/7.png",
+                "description": "Descriptions:"
+            },
+            {
+                "id": 8,
+                "name": "Art Title",
+                "Media": "Artist Name",
+                "image": "/Media/ImgTemp/8.png",
+                "description": "Description: Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"
             }
+        ];
 
-            ViewArtPage.querySelector('.image img').src = thisProduct.image;
-            ViewArtPage.querySelector('.name').innerText = thisProduct.name;
-            ViewArtPage.querySelector('.Media').innerText = thisProduct.Media;
-            ViewArtPage.querySelector('.description').innerText = thisProduct.description;
+      
+    function addDataToHTML() {
+        let listProductHTML = document.querySelector('.listProduct');
 
-
-            (products.filter(value => value.id != productId)).forEach(product => {
-                let newProduct = document.createElement('a');
-                newProduct.href = '/ViewArtPage.html?id=' + product.id;
-                newProduct.classList.add('item');
-                newProduct.innerHTML = 
+        products.forEach(product => {
+            let newProduct = document.createElement('div'); // Changed to div for better control
+            newProduct.classList.add('item');
+            newProduct.innerHTML = 
                 `<img src="${product.image}" alt="">
                 <h2>${product.name}</h2>
                 <div class="Media">${product.Media}</div>`;
-                listProduct.appendChild(newProduct);
-            });
+            newProduct.onclick = () => showViewArtPage(product.id); // Set onclick event
+            listProductHTML.appendChild(newProduct);
+        });
+    }
+
+    function showViewArtPage(productId) {
+        let thisProduct = products.find(product => product.id === productId);
+
+        if (!thisProduct) {
+            console.error('Product not found!');
+            return;
         }
 
-    </script>
+        let ViewArtPage = document.querySelector('.ViewArtPage');
+        ViewArtPage.querySelector('.image img').src = thisProduct.image;
+        ViewArtPage.querySelector('.name').innerText = thisProduct.name;
+        ViewArtPage.querySelector('.Media').innerText = thisProduct.Media;
+        ViewArtPage.querySelector('.description').innerText = thisProduct.description;
+    }
+
+    addDataToHTML();
+    showViewArtPage(products[0].id); // Initialize with the first product
+</script>
 </body>
+</html>
 {% endblock %}

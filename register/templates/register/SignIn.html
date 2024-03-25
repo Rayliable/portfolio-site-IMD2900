@@ -5,33 +5,32 @@
 {% endblock %}
 
 {% block content %}
-<head>
-    <link rel="stylesheet" type="text/css" href="/static/style/SigninStyle.css">
-    <title>Log In</title>
-</head>
-<body>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/style/SigninStyle.css">
+        <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
+        <title>Log In</title>
+    </head>
+    <body>
     <header>
-            <h2 style="font-size: 45px; text-align: center">Register / Log In</h2>
+        <h2 style="font-size: 45px; text-align: center">Register / Log In</h2>
     </header>
     <main>
-        <div class="left">
+        <div class="register-form">
             <h2 style="font-size: 45px; text-align: center">Create An Account</h2>
-            <form>
-                <label for="username">Username</label>
-                <input type="text" id="username">
-                <label for="email">Email</label>
-                <input type="email" id="email">
-                <label for="password">Create a Password</label>
-                <input type="password" id="password">
-                <label for="confirm-password">Confirm password</label>
-                <input type="password" id="confirm-password">
-                <p>* Minimum 8 characters</p>
-                <label for="terms">Accept Terms and Conditions</label>
-                <input type="checkbox" id="terms">
-                <button>SIGN UP</button>
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">
+                        Welcome!
+                    </legend>
+                    {{ r_form.as_p }}
+                </fieldset>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Register</button>
+                </div>
             </form>
         </div>
-        <div class ="line"></div>
+        <div class="line"></div>
         <div class="right">
             <h2>Already a User?</h2>
             <p>Click here to log in</p>
@@ -43,5 +42,5 @@
             <button>LOG IN</button>
         </div>
     </main>
-</body>
+    </body>
 {% endblock %}

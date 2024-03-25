@@ -2,6 +2,8 @@ from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib import messages
+
+from home.models import UserUpload, UserUploadURL
 from .forms import RegisterForm, UserUpdateForm, ProfileUpdateForm
 
 
@@ -22,7 +24,10 @@ def register(request):
 
 @login_required
 def profile(request):
-    return render(request, 'register/profile.html')
+    # Filter through images based on tag and privacy
+    filtered_images = UserUpload.objects.filter(author=request.user)
+    filtered_images_url = UserUploadURL.objects.filter(author=request.user)
+    return render(request, 'register/profile.html', {'images': filtered_images, 'url_images': filtered_images_url})
 
 
 @login_required

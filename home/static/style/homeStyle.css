@@ -37,6 +37,7 @@
     color: #FFFFFF;
     font-size: 31px;
     margin-top: 10px;
+    outline-style: none;
 }
 
 .About button:hover {

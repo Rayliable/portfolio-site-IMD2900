@@ -21,7 +21,7 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            #Do something here!!!!
+            # Do something here!!!!
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             subject = form.cleaned_data['subject']
@@ -53,7 +53,9 @@ def image_upload(request):  # page for users to upload images
         print(request.FILES)
         form = ImageForm(request.POST, request.FILES)
         if form.is_valid:  # if form one was valid
+            form.instance.author = request.user
             form.save()
+            messages.success(request, f'Thank you for your artwork!')
         else:  # if invalid print errors
             form = ImageForm()
             form2 = ImageFormURL()
@@ -65,7 +67,9 @@ def url_upload(request):  # page for users to upload images
         print(request.FILES)
         form = ImageFormURL(request.POST)
         if form.is_valid:  # if form one was valid
+            form.instance.author = request.user
             form.save()
+            messages.success(request, f'Thank you for your artwork!')
         else:  # if invalid print errors
             form = ImageForm()
     return redirect("upload_view")  # return to form view
@@ -83,6 +87,34 @@ def illustration(request):
     filtered_images = UserUpload.objects.filter(tags='option_three', privacy='option_one')
     filtered_images_url = UserUploadURL.objects.filter(tags='option_two', privacy='option_one')
     return render(request, 'illustration.html', {'images': filtered_images, 'url_images': filtered_images_url})
+
+
+def graphic_design(request):
+    # Filter through images based on tag and privacy
+    filtered_images = UserUpload.objects.filter(tags='option_four', privacy='option_one')
+    filtered_images_url = UserUploadURL.objects.filter(tags='option_two', privacy='option_one')
+    return render(request, 'graphicDesign.html', {'images': filtered_images, 'url_images': filtered_images_url})
+
+
+def animation(request):
+    # Filter through images based on tag and privacy
+    filtered_images = UserUpload.objects.filter(tags='option_five', privacy='option_one')
+    filtered_images_url = UserUploadURL.objects.filter(tags='option_two', privacy='option_one')
+    return render(request, 'animation.html', {'images': filtered_images, 'url_images': filtered_images_url})
+
+
+def threedee(request):
+    # Filter through images based on tag and privacy
+    filtered_images = UserUpload.objects.filter(tags='option_six', privacy='option_one')
+    filtered_images_url = UserUploadURL.objects.filter(tags='option_two', privacy='option_one')
+    return render(request, '3d.html', {'images': filtered_images, 'url_images': filtered_images_url})
+
+
+def painting(request):
+    # Filter through images based on tag and privacy
+    filtered_images = UserUpload.objects.filter(tags='option_seven', privacy='option_one')
+    filtered_images_url = UserUploadURL.objects.filter(tags='option_two', privacy='option_one')
+    return render(request, 'painting.html', {'images': filtered_images, 'url_images': filtered_images_url})
 
 
 def accpieces_view(request):  # home page of site

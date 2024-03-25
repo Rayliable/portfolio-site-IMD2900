@@ -15,5 +15,8 @@ urlpatterns = [
     path("extra_view/", views.extra_view, name="extra_view"),
     path("detail_view/", views.detail_view, name="detail_view"),
     path("SignIn/", views.SignIn_view, name="SignIn_view"),
-
+    path("graphic_design/", views.graphic_design, name="graphic_design"),
+    path("3d/", views.threedee, name="3d"),
+    path("animation/", views.animation, name="animation"),
+    path("painting/", views.painting, name="painting"),
 ]

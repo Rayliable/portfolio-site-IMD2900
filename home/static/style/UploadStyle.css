@@ -21,60 +21,6 @@ header {
 
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    
-}
-
-.logo{
-    width: 200px;
-}
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-    
-    
-}
-nav ul li a {
-    color: #0009;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-    cursor: pointer;
-}
-nav ul li a::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background:  #EFFFC8;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-nav ul li a:hover::after{
-    width:100%;
-}
-.header-text{
-    
-    margin-top: 25%;
-    font-size: 25px;
-    
-}
-.header-text h1{
-    font-size: 60px;
-    margin-top: 20px;
-    
-}
-.header-text h1 span{
-    color: #2B2525;
-
-}
-
 
 /*/--------------rest --------/*/
 .title{
@@ -197,7 +143,7 @@ nav ul li a:hover::after{
     top: 6cm;
     bottom: 4px;
     right: 4cm; 
-    background-color: #EFFFC8; 
+    background-color: #EFFFC8;
     color: #7EC4B5;
     border: 1px solid;
     border-radius: 5px;
@@ -214,9 +160,9 @@ nav ul li a:hover::after{
 }
 .button2 {
     position: absolute;
-    top: calc(3.2cm + 40px);
-    right: 14.8cm;
-    background-color: #EFFFC8;
+    top: calc(1.2cm + 10px);
+    right: 18.8cm;
+    background-color: white;
     color: #7EC4B5;
     border: 1px solid;
     border-radius: 5px;
@@ -232,25 +178,6 @@ nav ul li a:hover::after{
 }
 
 
-.buttonds {
- 
-    margin-bottom: 20px;
-    margin-top: -11.5cm;
-    margin-right: 10cm;
-}
-.buttonds button{
-    background-color: #c74343;
-    border: 2px solid;
-    padding:  1px;
-    padding-left: 5%;
-    padding-right: 40%;
-    border-radius: 10px;
-    font-family: Roboto;
-    font-size: large;
-    margin-left: 12cm;
-    
-    
-}
 
 
 .img-area {
