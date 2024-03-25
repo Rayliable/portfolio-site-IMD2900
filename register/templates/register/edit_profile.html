@@ -5,52 +5,16 @@
     <link rel="stylesheet" type="text/css" href="/static/style/generalStyle.css">
     <link rel="stylesheet" href="/static/style/AccountStyle.css">
     <div class="tagHeader">
+
         <h3 style="font-size: 45px; text-align: center"> Customize Account </h3>
+
     </div>
-    <div class="header__wrapper">
-      <header></header>
-      <div class="cols__container">
-        <div class="left__col">
-          <div class="img__container">
-            <img src="{{ user.profile.image.url }}" alt="" />
-            <span></span>
-          </div>
-          <h2>{{ user.username }}</h2>
-          <p> {{ user.email }}</p>
-          <div class="content">
-            <p>
-                {{ user.profile.bio }}
-            </p>
-
-            <ul>
-              <li><i class="fab fa-twitter"></i></li>
-              <i class="fab fa-pinterest"></i>
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-dribbble"></i>
-            </ul>
-          </div>
-        </div>
-        <div class="right__col">
-
-          <nav>
-            <ul>
-              <li><a href="">Personal Gallery</a></li>
-              <li><a href="">Settings</a></li>
-            </ul>
-            <button>Save Changes</button>
-          </nav>
-
-          <div class="photos">
-            <img src="/Media/ImgTemp/1.png" alt="Photo" />
-            <img src="/Media/ImgTemp/2.png" alt="Photo" />
-            <img src="/Media/ImgTemp/3.png" alt="Photo" />
-            <img src="/Media/ImgTemp/6.png" alt="Photo" />
-            <img src="/Media/ImgTemp/8.png" alt="Photo" />
-            <img src="/Media/ImgTemp/5.png" alt="Photo" />
-          </div>
-        </div>
-      </div>
+    <div class="tagHeader">
+        <img id="pfpimg" src="{{ user.profile.image.url }}" alt="ProfileImg" class="ProfileIcon" style="border-radius: 100px;">
+        <h3 style="font-size: 45px; text-align: center"> {{ user.username }} </h3>
+        <h4 style="font-size: 20px; text-align: center"> {{ user.profile.bio }} </h4>
     </div>
+
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <fieldset class="form-group">
