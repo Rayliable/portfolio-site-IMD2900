@@ -65,11 +65,11 @@ nav ul li a:hover::after{
     color: #2B2525;
 }
 
-footer {
+.footer {
     position: absolute;
-    top: 100%;
+    margin-top: 100%;
     background-color: #1c1c1c;
-    height: 150px;
+    height: 1500px;
     width: 100%;
     display: flex;
     justify-content: flex-start;

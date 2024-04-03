@@ -55,6 +55,12 @@ h2 {
     border-radius: 50px;
 }
 
+.defaultForm h1 {
+    color: #EFFFC8;
+    justify-content: center;
+    margin-left: 40%;
+}
+
 .contact-form h2 {
     color: #EFFFC8;
     justify-content: center;
